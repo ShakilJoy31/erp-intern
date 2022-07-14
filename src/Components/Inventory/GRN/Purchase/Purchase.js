@@ -3,9 +3,9 @@ import rightArrow from './../../../icons/Vector (8).svg';
 
 const Purchase = () => {
     return (
-        <div>
+        <div className='inventory-card'>
             <div className='mx-16 mt-24'>
-                <div class="card flex inventory-card justify-center bg-white shadow-2xl">
+                <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

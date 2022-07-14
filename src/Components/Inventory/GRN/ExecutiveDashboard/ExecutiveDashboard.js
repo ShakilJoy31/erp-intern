@@ -2,9 +2,9 @@ import React from 'react';
 
 const ExecutiveDashboard = () => {
     return (
-        <div>
+        <div className='inventory-card'>
             <div className='mx-12'>
-            <div class="card flex inventory-card justify-center bg-white shadow-2xl">
+            <div class="card flex justify-center bg-white shadow-2xl">
                 <div class="card-body">
                     <div className='flex'>
                     <div className='GRN flex'></div>

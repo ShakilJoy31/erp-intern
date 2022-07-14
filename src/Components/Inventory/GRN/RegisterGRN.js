@@ -3,7 +3,7 @@ import React from 'react';
 const RegisterGRN = () => {
     return (
         <div>
-            <h1>This is Register </h1>
+            <h1>THis is register GRN</h1>
         </div>
     );
 };

@@ -3,9 +3,9 @@ import rightArrow from './../../../icons/Vector (8).svg';
 
 const Planning = () => {
     return (
-        <div>
+        <div className='inventory-card'>
             <div className='mx-16 mt-24'>
-                <div class="card bg-white flex inventory-card justify-center shadow-2xl">
+                <div class="card bg-white flex justify-center shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './Desktop150.css';
 
-const Desktop150 = () => {
+const Desktop150 = ({setGin ,setGrn, setTransferNote, setStockStatement,setAgewiseANofStock}) => {
+    const handleInventory = () =>{
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -20,7 +27,7 @@ const Desktop150 = () => {
                         <div>
                             <li><Link to='/dashboard/executiveDashboard'>Executive Dashboard</Link></li>
 
-                            <li><Link to='/dashboard'>Inventory</Link></li>
+                            <li onClick={handleInventory}><Link to='/dashboard'>Inventory</Link></li>
 
                             <li><Link to='/dashboard/purchase'>Purchase</Link></li>
 
