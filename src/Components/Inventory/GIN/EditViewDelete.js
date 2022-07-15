@@ -1,10 +1,10 @@
 import React from 'react';
 
-const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
+const EditViewDelete = ({setCreate,setEditGRN,setRegister}) => {
     const handleGetBack = () =>{
         setCreate(''); 
         setEditGRN(''); 
-        setRegister(''); 
+        setRegister('');  
     }
     return (
         <div className='w-100'>
@@ -16,7 +16,7 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
-                            <h2 class="card-title">Edit/View/Delete</h2>
+                            <h2 class="card-title">Edit/View/Delete GIN</h2>
                         </div>
 
                         <div>
@@ -52,7 +52,7 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                                     </div>
                                 </div>
 
-                                <input type="text" placeholder="Order No." class="input w-full max-w-xs mt-8" />
+                                <input type="text" placeholder="GIN No." class="input w-full max-w-xs mt-8" />
                             </div>
                         </div>
 
@@ -64,4 +64,4 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
     );
 };
 
-export default EditViewDeleteGRN;
+export default EditViewDelete;

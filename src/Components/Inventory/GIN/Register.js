@@ -1,9 +1,9 @@
 import React from 'react';
 
-const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
+const Register = ({setCreate,setEditGRN,setRegister}) => {
     const handleGetBack = () =>{
         setCreate(''); 
-        setEditGRN(''); 
+        setEditGRN('');
         setRegister(''); 
     }
     return (
@@ -16,7 +16,7 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
-                            <h2 class="card-title">Edit/View/Delete</h2>
+                            <h2 class="card-title">Register GIN</h2>
                         </div>
 
                         <div>
@@ -41,7 +41,7 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                                 <div className='mx-12'>
                                     <div class="form-control max-w-lg w-80">
                                         <label class="label">
-                                            <span class="label-text">Action</span>
+                                            <span class="label-text">From</span>
                                         </label>
                                         <select class="select select-bordered">
                                             <option disabled selected>PO</option>
@@ -64,4 +64,4 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
     );
 };
 
-export default EditViewDeleteGRN;
+export default Register;

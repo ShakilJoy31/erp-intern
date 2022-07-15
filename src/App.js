@@ -14,6 +14,7 @@ import ProjectMGT from './Components/Inventory/GRN/ProjectMGT/ProjectMGT';
 import Planning from './Components/Inventory/GRN/Planning/Planning';
 import FinanceAccounts from './Components/Inventory/GRN/FinanceAccounts/FinanceAccounts';
 import { useState } from 'react';
+import Login from './Components/Authentication/Login.js/Login';
 
 function App() {
   const [grn, setGrn] = useState(''); 
@@ -44,6 +45,7 @@ function App() {
           <Route path='financeAccount' element={<FinanceAccounts></FinanceAccounts>}></Route>
           </Route>
         </Route>
+        <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
     </div>
   );

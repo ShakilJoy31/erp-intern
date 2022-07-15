@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../icons/Vector (8).svg';
 import GRN from '../GRN';
+import './InventoryCard.css'; 
 import GIN from '../../GIN/GIN';
-import './Inventory.css'; 
 import TransferNote from '../../TransferNote/TransferNote';
 import StockStatement from '../../StockStatement/StockStatement';
 import AgewiseAnalysisofStock from '../../AgewiseAnalysisofStock/AgewiseAnalysisofStock';
 
 const Inventory = ({setGin, setGrn, setTransferNote, setStockStatement,setAgewiseANofStock}) => { 
 
-    const handleGRN = (getString) =>{
-        setGrn[1](getString); 
+    const handleGRN = (getGtring) =>{
+        setGrn[1](getGtring); 
     }
-    const handleGIN = (getString) =>{
-        setGin[1](getString); 
+    const handleGIN = (getGtring) =>{
+        setGin[1](getGtring); 
     }
-    const handleTransferNote = (getString) =>{
-        setTransferNote[1](getString);
+    const handleTransferNote = (getGtring) =>{
+        setTransferNote[1](getGtring);
     }
-    const handleStockStatement = (getString) =>{
-        setStockStatement[1](getString);
-        console.log(getString); 
+    const handleStockStatement = (getGtring) =>{
+        setStockStatement[1](getGtring);
     }
-    const handleAgewiseAnalysisStock = (getString) =>{
-        setAgewiseANofStock[1](getString); 
-        console.log(getString); 
+    const handleAgewiseAnalysisStock = (getGtring) =>{
+        setAgewiseANofStock[1](getGtring); 
     }
     
     return (
@@ -71,27 +69,27 @@ const Inventory = ({setGin, setGrn, setTransferNote, setStockStatement,setAgewis
                 </div> : <div>
             <div>
             {
-                setGrn[0] && <GRN data={['Create', 'Edit/View/Delete', 'Register']} setGin={setGin} setGrn={setGrn} setTransferNote={setTransferNote} setStockStatement={setStockStatement} setAgewiseANofStock={setAgewiseANofStock}></GRN>
+                setGrn[0] && <GRN data={['Create', 'Edit/View/Delete', 'Register']}></GRN>
             }
         </div>
         <div>
             {
-                setGin[0] && <GIN data={['Create', 'Edit/View/Delete', 'Register']} setGin={setGin} setGrn={setGrn} setTransferNote={setTransferNote} setStockStatement={setStockStatement} setAgewiseANofStock={setAgewiseANofStock}></GIN>
+                setGin[0] && <GIN data={['Create', 'Edit/View/Delete', 'Register']}></GIN>
             }
         </div>
         <div>
             {
-                setTransferNote[0] && <TransferNote data={['Create', 'Edit/View/Delete', 'Register']} setGin={setGin} setGrn={setGrn} setTransferNote={setTransferNote} setStockStatement={setStockStatement} setAgewiseANofStock={setAgewiseANofStock}></TransferNote>
+                setTransferNote[0] && <TransferNote data={['Create', 'Edit/View/Delete', 'Register']}></TransferNote>
             }
         </div>
         <div>
             {
-                setStockStatement[0] && <StockStatement data={['Individual Project', 'All Projects', 'Register Stock Statement', 'Edit/View/Delete Statement', 'Project Wise Report Stock Statement']} setGin={setGin} setGrn={setGrn} setTransferNote={setTransferNote} setStockStatement={setStockStatement} setAgewiseANofStock={setAgewiseANofStock}></StockStatement>
+                setStockStatement[0] && <StockStatement data={['Individual Project', 'All Projects']}></StockStatement>
             }
         </div>
         <div>
             {
-                setAgewiseANofStock[0] && <AgewiseAnalysisofStock data={['Individual Project', 'All Projects']} setGin={setGin} setGrn={setGrn} setTransferNote={setTransferNote} setStockStatement={setStockStatement} setAgewiseANofStock={setAgewiseANofStock}></AgewiseAnalysisofStock> 
+                setAgewiseANofStock[0] && <AgewiseAnalysisofStock data={['Individual Project', 'All Projects']}></AgewiseAnalysisofStock>
             }
         </div>
             </div> 

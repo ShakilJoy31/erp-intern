@@ -1,0 +1,9 @@
+.inventory-card{
+    width: 90%;
+}
+.GRN{
+    position: absolute;
+    left: 0;
+    border: 6px solid #7E76CA;
+    height: 50px;
+}

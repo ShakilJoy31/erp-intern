@@ -1,0 +1,6 @@
+.left-arrow{
+    margin-bottom: 10px; 
+}
+.left-arrow:hover{
+    color: red;
+}

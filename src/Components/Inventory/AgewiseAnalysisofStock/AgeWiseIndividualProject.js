@@ -1,10 +1,9 @@
 import React from 'react';
 
-const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
+const AgeWiseIndividualProject = ({setAgeWiseIndividualProject, setAgeWiseAllProject}) => {
     const handleGetBack = () =>{
-        setCreate(''); 
-        setEditGRN(''); 
-        setRegister(''); 
+        setAgeWiseIndividualProject(''); 
+        setAgeWiseAllProject(''); 
     }
     return (
         <div className='w-100'>
@@ -16,32 +15,24 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
-                            <h2 class="card-title">Edit/View/Delete</h2>
+                            <h2 class="card-title">Individual Project - Agewise Analysis of Stock</h2>
                         </div>
 
                         <div>
                             <div className='flex justify-between'>
-                                <div>
-                                    <div class="form-control max-w-lg w-80">
-                                        <label class="label">
-                                            <span class="label-text">Project Code</span>
-                                        </label>
-                                        <select class="select select-bordered">
-                                            <option disabled selected>BJNOVAK</option>
-                                            <option>SHDFKJD</option>
-                                            <option>HDHFIDE</option>
-                                            <option>LUEIRHD</option>
-                                            <option>PJDOFJD</option>
-                                            <option>SU78IJL</option>
-                                        </select>
-                                    </div>
+                            <div class="form-control w-100 max-w-lg">
+                                    <label class="label">
+                                        <span class="label-text">Project Code</span>
+                                        
+                                    </label>
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg" />
                                 </div>
 
 
                                 <div className='mx-12'>
                                     <div class="form-control max-w-lg w-80">
                                         <label class="label">
-                                            <span class="label-text">Action</span>
+                                            <span class="label-text">Sub Inventory</span>
                                         </label>
                                         <select class="select select-bordered">
                                             <option disabled selected>PO</option>
@@ -52,16 +43,24 @@ const EditViewDeleteGRN = ({setCreate,setEditGRN,setRegister}) => {
                                     </div>
                                 </div>
 
-                                <input type="text" placeholder="Order No." class="input w-full max-w-xs mt-8" />
+                                
+                                <div class="form-control w-100 max-w-lg">
+                                    <label class="label">
+                                        <span class="label-text">As On Date</span>
+                                        
+                                    </label>
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg" />
+                                </div>
+                                
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <button style={{backgroundColor: '#7E76CA', width:'235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px'}} class="create-button btn block text-white mx-auto ">Search</button>
+            <button style={{backgroundColor: '#7E76CA', width:'235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px'}} class="create-button btn block text-white mx-auto ">Register</button>
         </div>
     );
 };
 
-export default EditViewDeleteGRN;
+export default AgeWiseIndividualProject;
