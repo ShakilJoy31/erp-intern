@@ -28,7 +28,7 @@ const CreatePurchaseRequisition = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Project Code</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info" />
+                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
                                     
                                 </div>
 
@@ -38,7 +38,7 @@ const CreatePurchaseRequisition = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Receipt Type</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="" class="input w-100 max-w-lg border border-info ml-12" />
+                                    <input type="text" placeholder="" class="input w-100 max-w-lg border border-info hover:border-error ml-12" />
                                 </div>
                                 </div>
 
@@ -49,7 +49,7 @@ const CreatePurchaseRequisition = ({ setCreate, setEditGRN, setRegister}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Create</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Create</button>
         </div>
     );
 };

@@ -92,7 +92,7 @@ const RegisterStockStatement = ({setprojectWiseReportStockStatement, setEditTran
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Register</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Register</button>
         </div>
     );
 };

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import CreateRequisitionOrderLeadTimeAnalysis from './CreateRequisitionOrderLeadTimeAnalysis';
+import EditRequisitionOrderLeadTimeAnalysis from './EditRequisitionOrderLeadTimeAnalysis';
+import RegisterRequisitionOrderLeadTimeAnalysis from './RegisterRequisitionOrderLeadTimeAnalysis';
 
 const RequisitionOrderLeadTimeAnalysis = ({data, setPurchaseRequisitionStatus, setCreateOrder, setOrderAmendment, setOrderStatus, setRequisitionOrderLeadTimeAnalysis, setRequestforQuotation, setVendorRegister, setComparativeStatement, setPBGProformaInvoiceDetails, setBudgetVSAllocatedStatus, setPDCAndLCdetails}) => {
     const [create, setCreate] = useState(''); 
@@ -16,7 +19,7 @@ const RequisitionOrderLeadTimeAnalysis = ({data, setPurchaseRequisitionStatus, s
             setRegister('');
         }
         else{
-            setRegister(''); 
+            setRegister('setRegister'); 
             setEditGRN(); 
             setCreate(''); 
         } 
@@ -60,7 +63,15 @@ const RequisitionOrderLeadTimeAnalysis = ({data, setPurchaseRequisitionStatus, s
                 </div>
             </div>
         </div> : <div>
-        
+            {
+                create && <CreateRequisitionOrderLeadTimeAnalysis setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CreateRequisitionOrderLeadTimeAnalysis>
+            }
+            {
+                editGRN && <EditRequisitionOrderLeadTimeAnalysis setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></EditRequisitionOrderLeadTimeAnalysis>
+            }
+            {
+                register && <RegisterRequisitionOrderLeadTimeAnalysis setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></RegisterRequisitionOrderLeadTimeAnalysis>
+            }
         </div>
         }
     </div>

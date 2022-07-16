@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import CreateComparativeStatement from './CreateComparativeStatement';
+import EditComparativeStatement from './EditComparativeStatement';
+import RegisterComparativeStatement from './RegisterComparativeStatement';
 
 const ComparativeStatement = ({data, setPurchaseRequisitionStatus, setCreateOrder, setOrderAmendment, setOrderStatus, setRequisitionOrderLeadTimeAnalysis, setRequestforQuotation, setVendorRegister, setComparativeStatement, setPBGProformaInvoiceDetails, setBudgetVSAllocatedStatus, setPDCAndLCdetails}) => {
     const [create, setCreate] = useState(''); 
@@ -16,7 +19,7 @@ const ComparativeStatement = ({data, setPurchaseRequisitionStatus, setCreateOrde
             setRegister('');
         }
         else{
-            setRegister(''); 
+            setRegister('setRegister'); 
             setEditGRN(); 
             setCreate(''); 
         } 
@@ -26,9 +29,13 @@ const ComparativeStatement = ({data, setPurchaseRequisitionStatus, setCreateOrde
         setPurchaseRequisitionStatus(''); 
         setCreateOrder(''); 
         setOrderAmendment(''); 
-        setOrderStatus(''); setRequisitionOrderLeadTimeAnalysis(''); setRequestforQuotation(''); 
+        setOrderStatus(''); 
+        setRequisitionOrderLeadTimeAnalysis(''); 
+        setRequestforQuotation(''); 
         setVendorRegister(''); 
-        setComparativeStatement(''); setPBGProformaInvoiceDetails(''); setBudgetVSAllocatedStatus(''); 
+        setComparativeStatement(''); 
+        setPBGProformaInvoiceDetails(''); 
+        setBudgetVSAllocatedStatus(''); 
         setPDCAndLCdetails('');
     }
 
@@ -60,7 +67,15 @@ const ComparativeStatement = ({data, setPurchaseRequisitionStatus, setCreateOrde
                 </div>
             </div>
         </div> : <div>
-        
+            {
+                create && <CreateComparativeStatement setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CreateComparativeStatement>
+            }
+            {
+                editGRN && <EditComparativeStatement setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></EditComparativeStatement>
+            }
+            {
+                register && <RegisterComparativeStatement setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></RegisterComparativeStatement>
+            }
         </div>
         }
     </div>

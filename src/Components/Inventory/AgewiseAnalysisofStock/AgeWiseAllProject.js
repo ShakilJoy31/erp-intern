@@ -23,7 +23,7 @@ const AgeWiseAllProject = ({setAgeWiseIndividualProject, setAgeWiseAllProject}) 
                                         <span class="label-text">As On Date</span>
                                         
                                     </label>
-                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info" />
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info hover:border-error" />
                                 </div>
 
                     </div>

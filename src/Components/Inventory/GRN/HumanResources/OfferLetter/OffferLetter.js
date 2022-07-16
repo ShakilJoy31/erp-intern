@@ -52,6 +52,7 @@ const OffferLetter = ({data,  setEmployeeDetails, setAttedance, setLeaveManageme
                         <h2 class="card-title">Offer Letter</h2>
                     </div>
                         </div>
+                        
                         {
                             data.map(singleData => <div>
                                 <div onClick={()=>handleCreate(singleData)} className='flex my-2'>

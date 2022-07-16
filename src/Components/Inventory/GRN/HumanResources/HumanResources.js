@@ -171,7 +171,7 @@ const HumanResources = () => {
                 {
                     leaveManagement && <LeaveManagement setEmployeeDetails={setEmployeeDetails} setAttedance={setAttedance} setLeaveManagement={setLeaveManagement} setOfferLettter={setOfferLettter} setServiceRecordLetter={setServiceRecordLetter} setHandoverFormalLetter={setHandoverFormalLetter} setPayroll={setPayroll} setDayLabourReport={setDayLabourReport} data={['Create', 'Edit/View/Delete', 'Register']}></LeaveManagement>
                 }
-
+ 
                 {
                     offerLettter && <OffferLetter setEmployeeDetails={setEmployeeDetails} setAttedance={setAttedance} setLeaveManagement={setLeaveManagement} setOfferLettter={setOfferLettter} setServiceRecordLetter={setServiceRecordLetter} setHandoverFormalLetter={setHandoverFormalLetter} setPayroll={setPayroll} setDayLabourReport={setDayLabourReport} data={['Create', 'Edit/View/Delete', 'Register']}></OffferLetter>
                 }

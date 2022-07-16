@@ -28,7 +28,7 @@ const EditLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">SO Code</span>
                                         
                                     </label>
-                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info" />
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info hover:border-error" />
                                 </div>
 
 
@@ -37,7 +37,7 @@ const EditLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Vendor Name</span>
                                         
                                     </label>
-                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info" />
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info hover:border-error" />
                                 </div>
 
                                 </div>
@@ -52,7 +52,7 @@ const EditLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <label class="label">
                                             <span class="label-text">Record Date</span>
                                         </label>
-                                        <select class="select select-bordered border border-info">
+                                        <select class="select select-bordered border border-info hover:border-error">
                                             <option disabled selected>PO</option>
                                             <option>Client Receipt</option>
                                             <option>Subcontractor's Stock</option>
@@ -65,7 +65,7 @@ const EditLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <label class="label">
                                             <span class="label-text">Order No</span>
                                         </label>
-                                        <select class="select select-bordered border border-info">
+                                        <select class="select select-bordered border border-info hover:border-error">
                                             <option disabled selected>PO</option>
                                             <option>Client Receipt</option>
                                             <option>Subcontractor's Stock</option>
@@ -82,7 +82,7 @@ const EditLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Search</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Search</button>
         </div>
     );
 };

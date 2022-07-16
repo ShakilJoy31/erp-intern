@@ -28,7 +28,7 @@ const RegisterDailyLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">SO Code</span>
                                         
                                     </label>
-                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info" />
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info hover:border-error" />
                                 </div>
 
 
@@ -37,7 +37,7 @@ const RegisterDailyLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Vendor Name</span>
                                         
                                     </label>
-                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info" />
+                                    <input style={{width: '350px'}} type="text" class="input max-w-lg border border-info hover:border-error" />
                                 </div>
 
                                 </div>
@@ -50,7 +50,7 @@ const RegisterDailyLabourReport = ({ setCreate, setEditGRN, setRegister}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Search</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Search</button>
         </div>
     );
 };

@@ -28,7 +28,7 @@ const RegisterLeaveManagement = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Project Code</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info" />
+                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
                                 </div>
 
                                 <div style={{width: '350px'}} class="form-control w-full max-w-lg">
@@ -36,7 +36,7 @@ const RegisterLeaveManagement = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Project Code</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info" />
+                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
                                 </div>
 
                                 </div>
@@ -47,7 +47,7 @@ const RegisterLeaveManagement = ({ setCreate, setEditGRN, setRegister}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Create</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Create</button>
         </div>
     );
 };

@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import CreatePDC from './CreatePDC';
+import EditPDC from './EditPDC';
+import RegisterPDC from './RegisterPDC';
 
 const PDCandLCdetails = ({data, setPurchaseRequisitionStatus, setCreateOrder, setOrderAmendment, setOrderStatus, setRequisitionOrderLeadTimeAnalysis, setRequestforQuotation, setVendorRegister, setComparativeStatement, setPBGProformaInvoiceDetails, setBudgetVSAllocatedStatus, setPDCAndLCdetails}) => {
     const [create, setCreate] = useState(''); 
@@ -16,7 +19,7 @@ const PDCandLCdetails = ({data, setPurchaseRequisitionStatus, setCreateOrder, se
             setRegister('');
         }
         else{
-            setRegister(''); 
+            setRegister('setEditGRN'); 
             setEditGRN(); 
             setCreate(''); 
         } 
@@ -60,7 +63,15 @@ const PDCandLCdetails = ({data, setPurchaseRequisitionStatus, setCreateOrder, se
                 </div>
             </div>
         </div> : <div>
-        
+            {
+                create && <CreatePDC setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CreatePDC>
+            }
+            {
+                editGRN && <EditPDC setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></EditPDC>
+            }
+            {
+                register && <RegisterPDC setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></RegisterPDC>
+            }
         </div>
         }
     </div>

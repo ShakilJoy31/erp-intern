@@ -3,6 +3,7 @@ import rightArrow from './../../../icons/Vector (8).svg';
 import { useState } from 'react';
 import CreateClientMeasurement from './Create/CreateClientMeasurement';
 import EditClientMeasurement from './Edit/EditClientMeasurement';
+import RegisterDailyMeasurement from '../Planning/DailyMeasurementSheet/RegisterDailyMeasurement';
 
 const CreateClientMeasurementSheet = ({data, setClientMeasurementSheet, setsubcontractorMeasurementSheet}) => {
     const [create, setCreate] = useState(''); 
@@ -47,8 +48,8 @@ const CreateClientMeasurementSheet = ({data, setClientMeasurementSheet, setsubco
                     </div>
                     {
                         data.map(singleData => <div>
-                            <div onClick={()=>handleCreate(singleData)} className='flex my-2'>
-                                <p>{singleData}</p>
+                            <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
+                                <p className='my-2'>{singleData}</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
@@ -62,6 +63,9 @@ const CreateClientMeasurementSheet = ({data, setClientMeasurementSheet, setsubco
             }
             {
                 edit && <EditClientMeasurement setCreate={setCreate} setEdit={setEdit}></EditClientMeasurement>
+            }
+            {
+                register && <RegisterDailyMeasurement setCreate={setCreate} setEdit={setEdit}></RegisterDailyMeasurement>
             }
         </div>  
             }

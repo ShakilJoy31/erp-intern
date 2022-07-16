@@ -28,7 +28,7 @@ const EditPBG = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">Project Code</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info" />
+                                    <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
                                     
                                 </div>
 
@@ -37,7 +37,7 @@ const EditPBG = ({ setCreate, setEditGRN, setRegister}) => {
                                         <label class="label">
                                             <span class="label-text">Action</span>
                                         </label>
-                                        <select class="select select-bordered border border-info">
+                                        <select class="select select-bordered border border-info hover:border-error">
                                             <option disabled selected>PO</option>
                                             <option>Client Receipt</option>
                                             <option>Subcontractor's Stock</option>
@@ -52,7 +52,7 @@ const EditPBG = ({ setCreate, setEditGRN, setRegister}) => {
                                         <span class="label-text">GRN No.</span>
                                         
                                     </label>
-                                    <input type="text" placeholder="" class="input w-100 max-w-lg border border-info" />
+                                    <input type="text" placeholder="" class="input w-100 max-w-lg border border-info hover:border-error" />
                                 </div>
                                 </div>
 
@@ -63,7 +63,7 @@ const EditPBG = ({ setCreate, setEditGRN, setRegister}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Create</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Create</button>
         </div>
     );
 };

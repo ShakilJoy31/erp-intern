@@ -28,7 +28,7 @@ const EditSubContractoeMeasurement = ({setCreate, setEdit}) => {
                                             <span class="label-text">Project Code</span>
 
                                         </label>
-                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info" />
+                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info hover:border-error" />
                                     </div>
 
 
@@ -38,7 +38,7 @@ const EditSubContractoeMeasurement = ({setCreate, setEdit}) => {
                                             <span class="label-text">Client Sheet No.</span>
 
                                         </label>
-                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info" />
+                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info hover:border-error" />
                                     </div>
 
 
@@ -47,7 +47,7 @@ const EditSubContractoeMeasurement = ({setCreate, setEdit}) => {
                                             <span class="label-text">Action</span>
 
                                         </label>
-                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info" />
+                                        <input style={{ width: '350px' }} type="text" class="input max-w-lg border border-info hover:border-error" />
                                     </div>
 
                                 </div>
@@ -57,7 +57,7 @@ const EditSubContractoeMeasurement = ({setCreate, setEdit}) => {
                     </div>
                 </div>
             </div>
-            <button style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Search</button>
+            <button  class="create-button btn block text-white mx-auto action-button">Search</button>
         </div>
     );
 };

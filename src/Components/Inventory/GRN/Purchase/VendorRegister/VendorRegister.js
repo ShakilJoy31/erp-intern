@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import CreateVendor from './CreateVendor';
+import EditVendor from './EditVendor';
+import RegisterVendor from './RegisterVendor';
 
 
 const VendorRegister = ({data, setPurchaseRequisitionStatus, setCreateOrder, setOrderAmendment, setOrderStatus, setRequisitionOrderLeadTimeAnalysis, setRequestforQuotation, setVendorRegister, setComparativeStatement, setPBGProformaInvoiceDetails, setBudgetVSAllocatedStatus, setPDCAndLCdetails}) => {
@@ -17,7 +20,7 @@ const VendorRegister = ({data, setPurchaseRequisitionStatus, setCreateOrder, set
             setRegister('');
         }
         else{
-            setRegister(''); 
+            setRegister('setRegister'); 
             setEditGRN(); 
             setCreate(''); 
         } 
@@ -61,7 +64,15 @@ const VendorRegister = ({data, setPurchaseRequisitionStatus, setCreateOrder, set
                 </div>
             </div>
         </div> : <div>
-        
+            {
+                create && <CreateVendor setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CreateVendor>
+            }
+            {
+                editGRN && <EditVendor setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></EditVendor>
+            }
+            {
+                register && <RegisterVendor setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></RegisterVendor>
+            }
         </div>
         }
     </div>

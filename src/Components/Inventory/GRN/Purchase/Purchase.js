@@ -6,9 +6,9 @@ import OrderAmendment from './OrderAmendment/OrderAmendment';
 import OrderStatus from './OrderStatus/OrderStatus';
 import PurchaseRequisitionStatus from './PurchaseRequisition/PurchaseRequisitionStatus';
 import PBGperformaInvoiceDetails from './PBGperformaInvoiceDetails/PBGperformaInvoiceDetails';
-import RequestOfQuotation from './RequestForQuotation/RequestOfQuotation';
 import RequisitionOrderLeadTimeAnalysis from './RequisitionOderLeadTimeAnalysis/RequisitionOrderLeadTimeAnalysis';
 import VendorRegister from './VendorRegister/VendorRegister';
+import PDCandLCdetails from './PDCandLCdetails/PDCandLCdetails';
 
 const Purchase = () => {
     const [RequisitionStatus, setPurchaseRequisitionStatus] = useState('');
@@ -163,7 +163,7 @@ const Purchase = () => {
         setBudgetVSAllocatedStatus('budgetVSAllocatedStatus')
         setPDCAndLCdetails('')
     }
-    const PDCandLCdetails = () => {
+    const PDCandLCdetail = () => {
         setPurchaseRequisitionStatus('')
         setCreateOrder('')
         setOrderAmendment('')
@@ -236,7 +236,7 @@ const Purchase = () => {
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={PDCandLCdetails} className='flex mt-4'>
+                    <div onClick={PDCandLCdetail} className='flex mt-4'>
                         <p>PDC & LC details</p>
                         <img src={rightArrow} alt="" />
                     </div>
@@ -309,19 +309,7 @@ const Purchase = () => {
                 setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
                 setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></RequisitionOrderLeadTimeAnalysis>
             }
-            {
-                RequestQuotation && <RequestOfQuotation setPurchaseRequisitionStatus={setPurchaseRequisitionStatus}
-                setCreateOrder={setCreateOrder}
-                setOrderAmendment={setOrderAmendment}
-                setOrderStatus={setOrderStatus}
-                setRequisitionOrderLeadTimeAnalysis={setRequisitionOrderLeadTimeAnalysis}
-                setRequestforQuotation={setRequestforQuotation}
-                setVendorRegister={setVendorRegister}
-                setComparativeStatement={setComparativeStatement}
-                setPBGProformaInvoiceDetails={setPBGProformaInvoiceDetails}
-                setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
-                setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></RequestOfQuotation>
-            }
+            
             {
                 VendorPurchaseRegister && <VendorRegister setPurchaseRequisitionStatus={setPurchaseRequisitionStatus}
                 setCreateOrder={setCreateOrder}
@@ -360,6 +348,19 @@ const Purchase = () => {
                 setPBGProformaInvoiceDetails={setPBGProformaInvoiceDetails}
                 setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
                 setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></PBGperformaInvoiceDetails>
+            }
+            {
+                PDCLCdetails && <PDCandLCdetails setPurchaseRequisitionStatus={setPurchaseRequisitionStatus}
+                setCreateOrder={setCreateOrder}
+                setOrderAmendment={setOrderAmendment}
+                setOrderStatus={setOrderStatus}
+                setRequisitionOrderLeadTimeAnalysis={setRequisitionOrderLeadTimeAnalysis}
+                setRequestforQuotation={setRequestforQuotation}
+                setVendorRegister={setVendorRegister}
+                setComparativeStatement={setComparativeStatement}
+                setPBGProformaInvoiceDetails={setPBGProformaInvoiceDetails}
+                setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
+                setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></PDCandLCdetails>
             }
             {/* {
                 BudgetVSAllocated && <BudgetVSAllocatedStatus setPurchaseRequisitionStatus={setPurchaseRequisitionStatus}

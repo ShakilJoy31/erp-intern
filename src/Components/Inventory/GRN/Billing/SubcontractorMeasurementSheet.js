@@ -48,8 +48,8 @@ const SubcontractorMeasurementSheet = ({data, setClientMeasurementSheet, setsubc
                     </div>
                     {
                         data.map(singleData => <div>
-                            <div onClick={()=>handleCreate(singleData)} className='flex my-2'>
-                                <p>{singleData}</p>
+                            <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
+                                <p className='my-2'>{singleData}</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
