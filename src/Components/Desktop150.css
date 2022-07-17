@@ -1,3 +1,15 @@
 .body-background-color{
     background-color: #FAFAFE; 
 }
+.activeLink{
+    position: absolute;
+    left: 0;
+    width: 6px;
+    height: 50px;
+    background-color: #7E76CA;
+}
+
+.for-linear-background{
+    height: 50px;
+    background-image: linear-gradient(to right, #7e76ca7c, white);
+}

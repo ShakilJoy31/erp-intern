@@ -2,24 +2,185 @@ import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import './Desktop150.css';
 import executiveDashboard from './icons/executive.svg';
-import billing from './icons/billing.svg';
-import estimation from './icons/estimation.svg';
-import finance from './icons/finance.svg';
-import humanResource from './icons/human resource.svg';
-import inventory from './icons/inventory.svg';
-import planning from './icons/planning.svg';
-import projectMGT from './icons/project MGT.svg';
-import purchase from './icons/purchase.svg';
-import stockHolder from './icons/stock holder.svg';
+import billingsvg from './icons/billing.svg';
+import estimationsvg from './icons/estimation.svg';
+import financesvg from './icons/finance.svg';
+import humanResourcesvg from './icons/human resource.svg';
+import inventorysvg from './icons/inventory.svg';
+import planningsvg from './icons/planning.svg';
+import projectMGTsvg from './icons/project MGT.svg';
+import purchasesvg from './icons/purchase.svg';
+import stockHoldersvg from './icons/stock holder.svg';
+import StockStatementsvg from './Inventory/StockStatement/StockStatement';
+import ProjectMGTsvg from './Inventory/GRN/ProjectMGT/ProjectMGT';
 
 const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAgewiseANofStock }) => {
+    const [inventory, setInventory] = useState();
+    const [billing, setBilling] = useState();
+    const [humanResource, setHumanResource] = useState();
+    const [stakeholderMGT, setStakeholderMGT] = useState();
+    const [estimation, setEstimation] = useState();
+    const [projectMGT, setProjectMGT] = useState();
+    const [planning, setPlanning] = useState();
+    const [finance, setFinance] = useState();
+    const [purchase, setPurchase] = useState();
+
+
     const handleInventory = () => {
+
+        setInventory('setInventory')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
         setGin('')
         setGrn('')
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
     }
+    const handlePurchase = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('handlePurchase')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleBilling = () => {
+        setInventory('')
+        setBilling('handleBilling')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleHumanResource = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('handleHumanResource')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleStakeholderMGT = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('setStakeholderMGT')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleEstimation = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('setEstimation')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleProjectMGT = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('setProjectMGT')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handlePlanning = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('setPlanning')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+    const handleFinance = () => {
+        setInventory('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('setFinance')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+    }
+
     return (
         <div>
             <div class="drawer drawer-mobile">
@@ -32,74 +193,66 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                 <div class="drawer-side">
                     <label for="my-drawer-2" class="drawer-overlay"></label>
 
-                    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                    <ul class="menu overflow-y-auto w-80 bg-base-100 text-base-content">
 
-                        <div>
-                            <div className='flex items-center justify center'>
-                                <img src={executiveDashboard} alt="" />
-                                <li><Link to='/dashboard/executiveDashboard'>Executive Dashboard</Link></li>
+                        <div className='mt-12 text-xl'>
+                            <div className='flex items-center mb-8 justify center'>
+                                <img className='mx-4' src={executiveDashboard} alt="" />
+                                <Link className='w-full' to='/dashboard/executiveDashboard'>Executive Dashboard</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={inventory} alt="" />
-                                <li onClick={handleInventory}><Link to='/dashboard'>Inventory</Link></li>
+                            <div onClick={handleInventory} className={`flex items-center mb-8 justify center ${inventory ? 'for-linear-background' : '' } `}>
+                                <div className={ `${inventory ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={inventorysvg} alt="" />
+                                <Link className='w-full' to='/dashboard'>Inventory</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={purchase} alt="" />
-                                <li><Link to='/dashboard/purchase'>Purchase</Link></li>
+                            <div onClick={handlePurchase} className={`flex items-center mb-8 justify center ${purchase ? 'for-linear-background' : '' } `}>
+                                <div className={ `${purchase ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={purchasesvg} alt="" />
+                                <Link className='w-full' to='/dashboard/purchase'>Purchase</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={billing} alt="" />
-                                <li><Link to='/dashboard/billing'>Billing</Link></li>
+                            <div onClick={handleBilling} className={`flex items-center mb-8 justify center ${billing ? 'for-linear-background' : '' } `}>
+                                <div className={ `${billing ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={billingsvg} alt="" />
+                                <Link className='w-full' to='/dashboard/billing'>Billing</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={humanResource} alt="" />
-                                <li><Link to='/dashboard/humanResources'>Human Resources</Link></li>
+                            <div onClick={handleHumanResource} className={`flex items-center mb-8 justify center ${humanResource ? 'for-linear-background' : '' } `}>
+                                <div className={ `${humanResource ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={humanResourcesvg} alt="" />
+                                <Link className='w-full' to='/dashboard/humanResources'>Human Resources</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={stockHolder} alt="" />
-                                <li><Link to='/dashboard/stakeholderMGT'>Stakeholder MGT</Link></li>
+                            <div onClick={handleStakeholderMGT} className={`flex items-center mb-8 justify center ${stakeholderMGT ? 'for-linear-background' : '' } `}>
+                                <div className={ `${stakeholderMGT ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={stockHoldersvg} alt="" />
+                                <Link className='w-full' to='/dashboard/stakeholderMGT'>Stakeholder MGT</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={estimation} alt="" />
-                                <li><Link to='/dashboard/estimationTenderMGT'>Estimation & Tender MGT</Link></li>
+                            <div onClick={handleEstimation} className={`flex items-center mb-8 justify center ${estimation ? 'for-linear-background' : '' } `}>
+                                <div className={ `${estimation ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={estimationsvg} alt="" />
+                                <Link className='w-full' to='/dashboard/estimationTenderMGT'>Estimation & Tender MGT</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={projectMGT} alt="" />
-                                <li><Link to='/dashboard/projectMGT'>Project MGT</Link></li>
+                            <div onClick={handleProjectMGT} className={`flex items-center mb-8 justify center ${projectMGT ? 'for-linear-background' : '' } `}>
+                                <div className={ `${projectMGT ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={projectMGTsvg} alt="" />
+                                <Link className='w-full' to='/dashboard/projectMGT'>Project MGT</Link>
                             </div>
 
-                            <div className='flex items-center justify center'>
-                                <img src={planning} alt="" />
-                                <li><Link to='/dashboard/planning'>Planning</Link></li>
+                            <div onClick={handlePlanning} className={`flex items-center mb-8 justify center ${planning ? 'for-linear-background' : '' } `}>
+                                <div className={ `${planning ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={planningsvg} alt="" />
+                                <Link className='w-full' to='/dashboard/planning'>Planning</Link>
                             </div>
-                            <div className='flex items-center justify center'>
-                                <img src={finance} alt="" />
-                                <li><Link to='/dashboard/financeAccount'>Finance & Accounting</Link></li>
+                            <div onClick={handleFinance} className={`flex items-center mb-8 justify center ${finance ? 'for-linear-background' : '' } `}>
+                                <div className={ `${finance ? 'activeLink' : ''}  `}></div>
+                                <img className='ml-4 mr-4' src={financesvg} alt="" />
+                                <Link className='w-full' to='/dashboard/financeAccount'>Finance & Accounting</Link>
                             </div>
-
-
-
-
-
-
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
                             
                         </div>
                     </ul>
