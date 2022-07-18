@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import rightArrow from './../../../../icons/Vector (8).svg'; 
+import CreateLabour from './CreateLabour';
 
 const LabourProductivityReport = ({data, setProject, setClientBOQ, setUploadDocuments, setProjectSalient, setLabourProductivity, setClientBill, setProjectCost, setPurchaseRequisition, setInternalProgress, setClientProgress, setProjectOverView, setWeeklyFund, setPaymentProposal, setClientBillStatus, setVendorBill}) => {
-    const [create, setCreate] = useState(''); 
-    const [edit, setEdit] = useState(''); 
-    const [register, setRegister] = useState('');
+    const [labourReport, setLabourReport] = useState('');
     const handleGetBack = () =>{
         setProject('');
         setClientBOQ('');
@@ -22,50 +20,79 @@ const LabourProductivityReport = ({data, setProject, setClientBOQ, setUploadDocu
         setClientBillStatus('');
         setVendorBill('');
     }
-    const handleCreate = (getString) =>{
-        if(getString === 'Create'){
-           setCreate(getString); 
-           setEdit('');
-           setRegister(''); 
-        }
-        else if(getString === 'Edit/View/Delete'){
-            setEdit(getString); 
-            setCreate(''); 
-            setRegister('');
-        }
-        else{
-            setRegister(getString); 
-            setEdit(); 
-            setCreate(''); 
-        } 
+    const handleLabourReport = () =>{
+        setLabourReport('setLabourReport'); 
     }
     return (
-        <div className='mx-16 mt-24'>
-                    <div>
-                        <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+        <div className='w-100'>
+                {
+                    (!labourReport) ? <div>
+                    <div className='mx-16 mt-24'>
+                        <div onClick={handleGetBack} className='left-arrow'>
+                            <i class="fa-solid fa-arrow-left text-4xl"></i>
                         </div>
-                <div class="card flex justify-center shadow-2xl bg-white">
-                    <div class="card-body">
-                    
-                        <div>
-                        <div className='flex items-center mt-4'>
-                        <div className='GRN'></div>
-                        <h2 class="card-title">Billing Schedule</h2>
-                    </div>
-                        </div>
-                        
-                        {
-                            data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
-                                    <p className='my-2'>{singleData}</p>
-                                    <img src={rightArrow} alt="" />
+                        <div class="card flex justify-center shadow-2xl bg-white">
+                            <div class="card-body">
+                                <div className='flex items-center'>
+                                    <div className='GRN'></div>
+                                    <h2 class="card-title">Labour Productivity Report</h2>
                                 </div>
-                                <hr />
-                            </div>)
+        
+                                <div>
+                                    <div>
+        
+                                        <div className='flex justify-between'>
+                                        <div class="form-control w-72 max-w-lg">
+                                            <label class="label">
+                                                <span class="label-text">Project Code</span>
+                                                
+                                            </label>
+                                            <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
+                                            
+                                        </div>
+        
+                                        <div class="form-control w-72 max-w-lg">
+                                            <label class="label">
+                                                <span class="label-text">From</span>
+                                                
+                                            </label>
+                                            <input type="text" placeholder="" class="input w-100 max-w-lg border-info hover:border-error" />
+                                        </div>
+    
+    
+                                        <div class="form-control w-72 max-w-lg">
+                                            <label class="label">
+                                                <span class="label-text">From</span>
+                                                
+                                            </label>
+                                            <input type="text" placeholder="" class="input w-100 max-w-lg border-info hover:border-error" />
+                                        </div>
+                                        
+                                        </div>
+    
+                                        <div class="form-control w-72 max-w-lg">
+                                            <label class="label">
+                                                <span class="label-text">From</span>
+                                                
+                                            </label>
+                                            <input type="text" placeholder="" class="input w-100 max-w-lg border-info hover:border-error" />
+                                        </div>
+        
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <button onClick={handleLabourReport} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class="create-button btn block text-white mx-auto ">Register</button>
+                    </div> : <div>
+                        {
+                            labourReport && <CreateLabour setLabourReport={setLabourReport}></CreateLabour>
                         }
                     </div>
-                </div>
-            </div>
+                }
+            
+        </div>
     );
 };
 

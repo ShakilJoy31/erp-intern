@@ -1,9 +1,9 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ViewEditedProjects from './ViewEditedProjects';
 
 const EditProject = ({setRegister, setEdit, setCreate }) => {
-    const [editedProject, setEditedProject] = useState(); 
+    const [editedProject, setEditedProject] = useState(''); 
     const handleGetBack = () => {
         setRegister('');
         setEdit('');

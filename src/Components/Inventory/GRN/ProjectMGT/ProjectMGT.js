@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../icons/Vector (8).svg';
-import ClientBillStatus from './ClientBillStatus/ClientBillStatus';
-import ClientBillSubcontractorBill from './ClientBillSubContractorBill/ClientBillSubcontractorBill';
+import AllSubConTractorReport from './ClientBillSubContractorBill/AllSubConTractorReport';
 import ClientBOQ from './ClientBOQ/ClientBOQ';
 import ClientProgressReport from './ClientProgressReport/ClientProgressReport';
 import InternalProgressReport from './InternalProgressReport/InternalProgressReport';
@@ -252,23 +251,6 @@ const ProjectMGT = () => {
         setClientBillStatus('')
         setVendorBill('')
     }
-    const handleClientBillStatus = () => {
-        setProject('')
-        setClientBOQ('')
-        setUploadDocuments('')
-        setProjectSalient('')
-        setLabourProductivity('')
-        setClientBill('')
-        setProjectCost('')
-        setPurchaseRequisition('')
-        setInternalProgress('')
-        setClientProgress('')
-        setProjectOverView('')
-        setWeeklyFund('')
-        setPaymentProposal('')
-        setClientBillStatus('setClientBillStatus')
-        setVendorBill('')
-    }
     const handleVendorBillStatus = () => {
         setProject('')
         setClientBOQ('')
@@ -293,7 +275,7 @@ const ProjectMGT = () => {
                 <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
-                            <div className='GRN flex'></div>
+                            <div className='flex GRN'></div>
                             <h2 class="card-title">Project Management Module</h2>
                         </div>
                         <div onClick={handleProject} className='flex forHover'>
@@ -414,8 +396,7 @@ const ProjectMGT = () => {
                     paymentProposal && <PaymentProposal setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['Create', 'Edit/View/Register']}></PaymentProposal>
                 }
                 {
-                    clientBillStatus && <ClientBillSubcontractorBill setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></ClientBillSubcontractorBill>
-                    // Different style
+                    clientBill && <AllSubConTractorReport setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></AllSubConTractorReport>
                 }
                 {
                     vendorBill && <vendorBill setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></vendorBill>

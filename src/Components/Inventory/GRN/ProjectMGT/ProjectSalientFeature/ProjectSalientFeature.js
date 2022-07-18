@@ -31,7 +31,7 @@ const ProjectSalientFeature = ({data, setProject, setClientBOQ, setUploadDocumen
            setEdit('');
            setRegister(''); 
         }
-        else if(getString === 'Edit/View/Delete'){
+        else if(getString === 'Edit/View/Register'){
             setEdit(getString); 
             setCreate(''); 
             setRegister('');

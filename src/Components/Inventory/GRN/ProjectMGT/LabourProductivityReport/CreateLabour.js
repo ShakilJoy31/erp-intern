@@ -1,19 +1,20 @@
 import React from 'react';
 
-const RegisterSalient = ({setEditedProject}) => {
-    const handleGetBack = () =>{
-        setEditedProject(''); 
+const CreateLabour = ({ setLabourReport }) => {
+    const handleGetBack = () => {
+        setLabourReport('');
     }
     return (
-        <div className='mx-16 mt-12'>
-            {
-                <div>
-                    <div>
-                        <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+        <div className='w-100'>
+            <div>
+                <div className='mx-16 mt-24'>
+                    <div onClick={handleGetBack} className='left-arrow'>
+                        <i class="fa-solid fa-arrow-left text-4xl"></i>
                     </div>
-                    <h1 className='mb-12 text-3xl'>Register</h1>
+                    <h2 class="card-title text-2xl mb-6">Labour Productivity Report</h2>
                     <div class="card flex justify-center shadow-2xl bg-white">
                         <div class="card-body">
+                            <div className='flex items-center'>
                             <div class="overflow-x-auto">
                                 <table class="table w-full">
 
@@ -58,12 +59,14 @@ const RegisterSalient = ({setEditedProject}) => {
                                     </tbody>
                                 </table>
                             </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
         </div>
     );
 };
 
-export default RegisterSalient;
+export default CreateLabour;
