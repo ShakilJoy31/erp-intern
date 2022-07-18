@@ -196,59 +196,59 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                     <ul class="menu overflow-y-auto w-80 bg-base-100 text-base-content">
 
                         <div className='mt-12 text-xl'>
-                            <div className='flex items-center mb-8 justify center'>
+                            <div className='flex items-center mb-6 justify center'>
                                 <img className='mx-4' src={executiveDashboard} alt="" />
                                 <Link className='w-full' to='/dashboard/executiveDashboard'>Executive Dashboard</Link>
                             </div>
 
-                            <div onClick={handleInventory} className={`flex items-center mb-8 justify center ${inventory ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleInventory} className={`flex items-center mb-6 justify center ${inventory ? 'for-linear-background' : '' } `}>
                                 <div className={ `${inventory ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={inventorysvg} alt="" />
                                 <Link className='w-full' to='/dashboard'>Inventory</Link>
                             </div>
 
-                            <div onClick={handlePurchase} className={`flex items-center mb-8 justify center ${purchase ? 'for-linear-background' : '' } `}>
+                            <div onClick={handlePurchase} className={`flex items-center mb-6 justify center ${purchase ? 'for-linear-background' : '' } `}>
                                 <div className={ `${purchase ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={purchasesvg} alt="" />
                                 <Link className='w-full' to='/dashboard/purchase'>Purchase</Link>
                             </div>
 
-                            <div onClick={handleBilling} className={`flex items-center mb-8 justify center ${billing ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleBilling} className={`flex items-center mb-6 justify center ${billing ? 'for-linear-background' : '' } `}>
                                 <div className={ `${billing ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={billingsvg} alt="" />
                                 <Link className='w-full' to='/dashboard/billing'>Billing</Link>
                             </div>
 
-                            <div onClick={handleHumanResource} className={`flex items-center mb-8 justify center ${humanResource ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleHumanResource} className={`flex items-center mb-6 justify center ${humanResource ? 'for-linear-background' : '' } `}>
                                 <div className={ `${humanResource ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={humanResourcesvg} alt="" />
                                 <Link className='w-full' to='/dashboard/humanResources'>Human Resources</Link>
                             </div>
 
-                            <div onClick={handleStakeholderMGT} className={`flex items-center mb-8 justify center ${stakeholderMGT ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleStakeholderMGT} className={`flex items-center mb-6 justify center ${stakeholderMGT ? 'for-linear-background' : '' } `}>
                                 <div className={ `${stakeholderMGT ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={stockHoldersvg} alt="" />
                                 <Link className='w-full' to='/dashboard/stakeholderMGT'>Stakeholder MGT</Link>
                             </div>
 
-                            <div onClick={handleEstimation} className={`flex items-center mb-8 justify center ${estimation ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleEstimation} className={`flex items-center mb-6 justify center ${estimation ? 'for-linear-background' : '' } `}>
                                 <div className={ `${estimation ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={estimationsvg} alt="" />
                                 <Link className='w-full' to='/dashboard/estimationTenderMGT'>Estimation & Tender MGT</Link>
                             </div>
 
-                            <div onClick={handleProjectMGT} className={`flex items-center mb-8 justify center ${projectMGT ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleProjectMGT} className={`flex items-center mb-6 justify center ${projectMGT ? 'for-linear-background' : '' } `}>
                                 <div className={ `${projectMGT ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={projectMGTsvg} alt="" />
                                 <Link className='w-full' to='/dashboard/projectMGT'>Project MGT</Link>
                             </div>
 
-                            <div onClick={handlePlanning} className={`flex items-center mb-8 justify center ${planning ? 'for-linear-background' : '' } `}>
+                            <div onClick={handlePlanning} className={`flex items-center mb-6 justify center ${planning ? 'for-linear-background' : '' } `}>
                                 <div className={ `${planning ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={planningsvg} alt="" />
                                 <Link className='w-full' to='/dashboard/planning'>Planning</Link>
                             </div>
-                            <div onClick={handleFinance} className={`flex items-center mb-8 justify center ${finance ? 'for-linear-background' : '' } `}>
+                            <div onClick={handleFinance} className={`flex items-center mb-6 justify center ${finance ? 'for-linear-background' : '' } `}>
                                 <div className={ `${finance ? 'activeLink' : ''}  `}></div>
                                 <img className='ml-4 mr-4' src={financesvg} alt="" />
                                 <Link className='w-full' to='/dashboard/financeAccount'>Finance & Accounting</Link>

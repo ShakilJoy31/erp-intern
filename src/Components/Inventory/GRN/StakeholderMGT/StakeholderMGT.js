@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Agency from '../ProjectMGT/Agency/Agency';
-import Client from '../ProjectMGT/Client/Client';
-import Vendor from '../ProjectMGT/Vendor/Vendor';
+import Agency from './Agency/Agency';
+import Client from './Client/Client';
+import Vendor from './Vendor/Vendor';
 import rightArrow from './../../../icons/Vector (8).svg';
 
 const StakeholderMGT = () => {

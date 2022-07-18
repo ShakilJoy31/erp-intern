@@ -4,6 +4,8 @@ import './Navbar.css';
 import calender from './../icons/Vector (4).svg'; 
 import plus from './../icons/Vector (5).svg'; 
 import notification from './../icons/Vector (6).svg';  
+import applicationLogo from './../icons/applicationLogo.svg'; 
+import logOut from './../icons/logOut icon.svg'; 
 
 const Navbar = () => {
     return (
@@ -11,14 +13,15 @@ const Navbar = () => {
             <div class="navbar bg-base-100">
                 <div class="flex-1">
                     <div>
-                        <Link className='text-3xl text-purple-500' to='/'>ERP MODEL</Link>
-                        <p>ULTIMATE BUSINESS ERP</p>
+                        <Link className='text-3xl text-purple-500' to='/'>
+                        <img src={applicationLogo} alt="" />
+                        </Link>
                     </div>
                 </div>
                 <div class="flex-none">     
                     <div class="block mx-auto">
                         <div class="flex">
-                            <div className='mr-8 flex justify-center items-center'>
+                            <div className='flex items-center justify-center mr-8'>
                             <img className='mr-6' src={calender} alt="" />
 
                                 <img className='mr-6' src={plus} alt="" />
@@ -27,7 +30,7 @@ const Navbar = () => {
                             </div>
                             <div className='mr-4'>
                                 <p>Welcome Staff Member</p>
-                                <div className='flex justify-center items-center'>
+                                <div className='flex items-center justify-center'>
                                     <h1 className='text-xl text-purple-400'>Mr.Arnold Subhashnagar</h1>
                                     <i class="fa-solid fa-angle-down ml-4"></i>
                                 </div>
@@ -44,10 +47,8 @@ const Navbar = () => {
 
                     
                     <div class="dropdown dropdown-end last-icon ml-5">
-                        <label tabindex="0" class="btn btn-ghost btn-circle avatar mt-4">
-                            <div class="w-10 rounded-full">
-                            <i class="fa-solid fa-arrow-right-from-bracket text-3xl text-white"></i>
-                            </div>
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <img className='svg-logout-icon mt-2 ml-6' src={logOut} alt="" />
                         </label>
                     </div>
                 </div>
