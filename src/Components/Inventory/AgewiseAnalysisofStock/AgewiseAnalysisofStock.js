@@ -36,7 +36,7 @@ const AgewiseAnalysisofStock = ({data, setGin, setGrn, setTransferNote, setStock
                             </div>
                             {
                                 data.map(singleData => <div>
-                                    <div onClick={()=>handleAgewiseAnalysisOfProjects(singleData)} className='flex my-2'>
+                                    <div onClick={()=>handleAgewiseAnalysisOfProjects(singleData)} className='flex my-2 forHover'>
                                         <p>{singleData}</p>
                                         <img src={rightArrow} alt="" />
                                     </div>

@@ -50,7 +50,7 @@ const TransferNote = ({data, setGin, setGrn, setTransferNote, setStockStatement,
                         </div>
                         {
                             data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex my-2'>
+                                <div onClick={()=>handleCreate(singleData)} className='flex my-2 forHover'>
                                     <p>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>

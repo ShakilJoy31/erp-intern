@@ -41,7 +41,7 @@ const LeaveManagement = ({data,  setEmployeeDetails, setAttedance, setLeaveManag
             {
                 (!create && !editGRN && ! register) ? <div className='mx-16 mt-24'>
                     <div>
-                        <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+                        <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                         </div>
                 <div class="card flex justify-center shadow-2xl bg-white">
                     <div class="card-body">
@@ -54,7 +54,7 @@ const LeaveManagement = ({data,  setEmployeeDetails, setAttedance, setLeaveManag
                         </div>
                         {
                             data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex my-2'>
+                                <div onClick={()=>handleCreate(singleData)} className='flex my-2 forHover'>
                                     <p>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>

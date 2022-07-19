@@ -23,12 +23,12 @@ const Billing = () => {
                             <div className='GRN'></div>
                             <h2 class="card-title">Billing</h2>
                         </div>
-                        <div onClick={handleClientMeasurementSheet} className='flex mt-4'>
+                        <div onClick={handleClientMeasurementSheet} className='flex mt-4 forHover'>
                             <p>Client Measurement Sheet</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleSubcontractorMeasurementSheet} className='flex mt-4'>
+                        <div onClick={handleSubcontractorMeasurementSheet} className='flex mt-4 forHover'>
                             <p>Subcontractor Measurement Sheet</p>
                             <img src={rightArrow} alt="" />
                         </div>

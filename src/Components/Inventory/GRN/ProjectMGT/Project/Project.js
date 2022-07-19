@@ -52,7 +52,7 @@ const Project = ({ data, setProject, setClientBOQ, setUploadDocuments, setProjec
             {
                 (!create && !register && !edit) ? <div>
                     <div>
-                        <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+                        <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                     </div>
                     <div class="card flex justify-center shadow-2xl bg-white">
                         <div class="card-body">

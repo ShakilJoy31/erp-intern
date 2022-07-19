@@ -40,28 +40,28 @@ const Inventory = ({setGin, setGrn, setTransferNote, setStockStatement,setAgewis
                                 <div className='GRN'></div>
                                 <h2 class="card-title">Inventory</h2>
                             </div>
-                            <div onClick={()=>handleGRN('GRN')} className='flex mt-4'>
-                                <p>GRN</p>
+                            <div onClick={()=>handleGRN('GRN')} className='flex mt-4 forHover'>
+                                <p className='mouse-pointer'>GRN</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
-                            <div onClick={()=>handleGIN('GIN')} className='flex mt-4'>
-                                <p>GIN</p>
+                            <div onClick={()=>handleGIN('GIN')} className='flex mt-4 forHover'>
+                                <p className='mouse-pointer'>GIN</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
-                            <div onClick={()=>handleTransferNote('TransferNote')} className='flex mt-4'>
-                                <p>Transfer Note</p>
+                            <div onClick={()=>handleTransferNote('TransferNote')} className='flex mt-4 forHover'>
+                                <p className='mouse-pointer'>Transfer Note</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
-                            <div onClick={()=>handleStockStatement('StockStatement')} className='flex mt-4'>
-                                <p>Stock Statement</p>
+                            <div onClick={()=>handleStockStatement('StockStatement')} className='flex mt-4 forHover'>
+                                <p className='mouse-pointer'>Stock Statement</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />
-                            <div onClick={()=>handleAgewiseAnalysisStock('Agewise Analysis of Stock')} className='flex mt-4'>
-                                <p>Agewise Analysis of Stock</p>
+                            <div onClick={()=>handleAgewiseAnalysisStock('Agewise Analysis of Stock')} className='flex mt-4 forHover'>
+                                <p className='mouse-pointer'>Agewise Analysis of Stock</p>
                                 <img src={rightArrow} alt="" />
                             </div>
                             <hr />

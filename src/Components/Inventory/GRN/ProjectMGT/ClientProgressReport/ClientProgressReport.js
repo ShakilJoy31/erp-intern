@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import rightArrow from './../../../../icons/Vector (8).svg'; 
+import CreateClientProgressReport from './CreateClientProgressReport';
 
-const ClientProgressReport = ({data, setProject, setClientBOQ, setUploadDocuments, setProjectSalient, setLabourProductivity, setClientBill, setProjectCost, setPurchaseRequisition, setInternalProgress, setClientProgress, setProjectOverView, setWeeklyFund, setPaymentProposal, setClientBillStatus, setVendorBill}) => {
+const ClientProgressReport = ({ setProject, setClientBOQ, setUploadDocuments, setProjectSalient, setLabourProductivity, setClientBill, setProjectCost, setPurchaseRequisition, setInternalProgress, setClientProgress, setProjectOverView, setWeeklyFund, setPaymentProposal, setClientBillStatus, setVendorBill}) => {
     const [create, setCreate] = useState(''); 
-    const [edit, setEdit] = useState(''); 
-    const [register, setRegister] = useState('');
     const handleGetBack = () =>{
         setProject('');
         setClientBOQ('');
@@ -23,49 +21,189 @@ const ClientProgressReport = ({data, setProject, setClientBOQ, setUploadDocument
         setVendorBill('');
     }
     const handleCreate = (getString) =>{
-        if(getString === 'Create'){
-           setCreate(getString); 
-           setEdit('');
-           setRegister(''); 
-        }
-        else if(getString === 'Edit/View/Delete'){
-            setEdit(getString); 
-            setCreate(''); 
-            setRegister('');
-        }
-        else{
-            setRegister(getString); 
-            setEdit(); 
-            setCreate(''); 
-        } 
+        setCreate(getString); 
     }
     return (
-        <div className='mx-16 mt-24'>
-                    <div>
-                        <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
-                        </div>
+        <div className='mx-16 mt-12'>
+            {
+                !create ? <div>
+                <div>
+                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                </div>
+                <div className='flex items-center ms-12'>
+                <h1 className='mb-10 text-3xl'>Client Progress Report</h1>
+
+                <div className='flex items-center justify-end mb-8 add-projects'>
+                <input type="text" placeholder="Type here" class="input max-w-xs border border-info hover:border-error mr-12" />
+
+                <button onClick={handleCreate} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Add New</button>
+
+                </div>
+                </div>
                 <div class="card flex justify-center shadow-2xl bg-white">
                     <div class="card-body">
-                    
-                        <div>
-                        <div className='flex items-center mt-4'>
-                        <div className='GRN'></div>
-                        <h2 class="card-title">Billing Schedule</h2>
-                    </div>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+
+                                <thead>
+                                    <tr>
+                                        <th>S No.</th>
+                                        <th>Project Code</th>
+                                        <th>Effective BOQ</th>
+                                        <th>BOQ Item</th>
+                                        <th>UOM</th>
+                                        <th>Qty</th>
+                                        <th>Price</th>
+                                        <th>Vendor Cty</th>
+                                        <th>Vendor Cost</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                    <tr>
+                                        <th>01</th>
+                                        <td>01</td>
+                                        <td>2022</td>
+                                        <td>4.5m-7.0m</td>
+                                        <td>Main Branch</td>
+                                        <td>2022</td>
+                                        <td>2022</td>
+                                        <td>Delhi</td>
+                                        <td>2753</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        
-                        {
-                            data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
-                                    <p className='my-2'>{singleData}</p>
-                                    <img src={rightArrow} alt="" />
-                                </div>
-                                <hr />
-                            </div>)
-                        }
                     </div>
                 </div>
+            </div> : <div>
+              {
+                create && <CreateClientProgressReport setCreate={setCreate}></CreateClientProgressReport>
+              }
             </div>
+            }
+        </div>
     );
 };
 

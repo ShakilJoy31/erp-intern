@@ -76,7 +76,7 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
                         </div>
                         {
                             data.map(singleData => <div>
-                                <div onClick={()=>handleTransferNote(singleData)} className='flex my-2'>
+                                <div onClick={()=>handleTransferNote(singleData)} className='flex my-2 forHover'>
                                     <p>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>

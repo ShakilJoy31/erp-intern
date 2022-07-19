@@ -2,9 +2,8 @@
     width: 350px;
 }
 .forHover:hover{
-    background-color:rgba(112, 128, 144, 0.073);
-    border-radius: 5px;
-    color: tomato;
+    cursor: pointer;
+    font-weight: 700;
 }
 .right-mark{
     color: tomato;

@@ -18,7 +18,7 @@ const ViewAllProject = ({setRegister, setEdit, setCreate }) => {
             {
                 !createProjects ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                 </div>
                 <div className='flex items-center ms-12'>
                 <h1 className='mb-10 text-3xl'>Project</h1>

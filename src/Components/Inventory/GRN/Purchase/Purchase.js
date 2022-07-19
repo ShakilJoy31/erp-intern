@@ -186,57 +186,57 @@ const Purchase = () => {
                         <div className='GRN'></div>
                         <h2 class="card-title">Purchase</h2>
                     </div>
-                    <div onClick={purchaseRequisitionStatus} className='flex mt-4'>
+                    <div onClick={purchaseRequisitionStatus} className='flex mt-4 forHover'>
                         <p>Purchase Requisition Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={createOrder} className='flex mt-4'>
+                    <div onClick={createOrder} className='flex mt-4 forHover'>
                         <p>Create Order</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={orderAmendment} className='flex mt-4'>
+                    <div onClick={orderAmendment} className='flex mt-4 forHover'>
                         <p>Order Amendment</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={orderStatus} className='flex mt-4'>
+                    <div onClick={orderStatus} className='flex mt-4 forHover'>
                         <p>Order Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={requisitionOrderLeadTimeAnalysis} className='flex mt-4'>
+                    <div onClick={requisitionOrderLeadTimeAnalysis} className='flex mt-4 forHover'>
                         <p>Requisition- Order Lead Time analysis</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={requestforQuotation} className='flex mt-4'>
+                    <div className='flex mt-4 forHover'>
                         <p>Request for Quotation</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={vendorRegister} className='flex mt-4'>
+                    <div onClick={vendorRegister} className='flex mt-4 forHover'>
                         <p>Vendor Register</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={comparativeStatement} className='flex mt-4'>
+                    <div onClick={comparativeStatement} className='flex mt-4 forHover'>
                         <p>Comparative Statement</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={PBGProformaInvoiceDetails} className='flex mt-4'>
+                    <div onClick={PBGProformaInvoiceDetails} className='flex mt-4 forHover'>
                         <p>PBG & Proforma Invoice Details</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={budgetVSAllocatedStatus} className='flex mt-4'>
+                    <div className='flex mt-4 forHover'>
                         <p>Budget VS Allocated Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
                     <hr />
-                    <div onClick={PDCandLCdetail} className='flex mt-4'>
+                    <div onClick={PDCandLCdetail} className='flex mt-4 forHover'>
                         <p>PDC & LC details</p>
                         <img src={rightArrow} alt="" />
                     </div>
@@ -362,19 +362,6 @@ const Purchase = () => {
                 setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
                 setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></PDCandLCdetails>
             }
-            {/* {
-                BudgetVSAllocated && <BudgetVSAllocatedStatus setPurchaseRequisitionStatus={setPurchaseRequisitionStatus}
-                setCreateOrder={setCreateOrder}
-                setOrderAmendment={setOrderAmendment}
-                setOrderStatus={setOrderStatus}
-                setRequisitionOrderLeadTimeAnalysis={setRequisitionOrderLeadTimeAnalysis}
-                setRequestforQuotation={setRequestforQuotation}
-                setVendorRegister={setVendorRegister}
-                setComparativeStatement={setComparativeStatement}
-                setPBGProformaInvoiceDetails={setPBGProformaInvoiceDetails}
-                setBudgetVSAllocatedStatus={setBudgetVSAllocatedStatus}
-                setPDCAndLCdetails={setPDCAndLCdetails} data={['Create', 'Edit/View/Delete', 'Register']}></BudgetVSAllocatedStatus>
-            } */}
         </div>
            }
         </div>

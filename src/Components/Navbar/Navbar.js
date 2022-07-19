@@ -9,7 +9,7 @@ import logOut from './../icons/logOut icon.svg';
 
 const Navbar = () => {
     return (
-        <div className='mx-4'>
+        <div className='mx-4 navbarIndex'>
             <div class="navbar bg-base-100">
                 <div class="flex-1">
                     <div>
@@ -48,7 +48,7 @@ const Navbar = () => {
                     
                     <div class="dropdown dropdown-end last-icon ml-5">
                         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                            <img className='svg-logout-icon mt-2 ml-6' src={logOut} alt="" />
+                            <img className='mt-2 ml-6 svg-logout-icon' src={logOut} alt="" />
                         </label>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ const AllSubConTractorReport = ({setProject, setClientBOQ, setUploadDocuments, s
             {
                 !clientSubcontractor ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                 </div>
                 <div className='flex items-center ms-12'>
                 <h1 className='mb-10 text-3xl'>Client Bill Subcontractor Bill Report</h1>

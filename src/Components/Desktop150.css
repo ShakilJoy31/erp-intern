@@ -9,6 +9,15 @@
     background-color: #7E76CA;
 }
 
+.Overlap{
+    position: absolute;
+    top: 0; 
+}
+
+.text-size{
+    font-size: 20px;
+}
+
 .for-linear-background{
     height: 50px;
     background-image: linear-gradient(to right, #7e76ca7c, white);

@@ -117,42 +117,42 @@ const HumanResources = () => {
                             <div className='GRN'></div>
                             <h2 class="card-title">Human Resources</h2>
                         </div>
-                        <div className='flex mt-4'>
+                        <div className='flex mt-4 forHover'>
                             <p>Employees Details</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleAttednce} className='flex mt-4'>
+                        <div onClick={handleAttednce} className='flex mt-4 forHover'>
                             <p>Attendance</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleLeaveManagement} className='flex mt-4'>
+                        <div onClick={handleLeaveManagement} className='flex mt-4 forHover'>
                             <p>Leave Management</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleOfferLettter} className='flex mt-4'>
+                        <div onClick={handleOfferLettter} className='flex mt-4 forHover'>
                             <p>Offer Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleServiceRecordLetter} className='flex mt-4'>
+                        <div onClick={handleServiceRecordLetter} className='flex mt-4 forHover'>
                             <p>Service Record Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleHandoverFormalLetter} className='flex mt-4'>
+                        <div onClick={handleHandoverFormalLetter} className='flex mt-4 forHover'>
                             <p>Handover Formal Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handlePayroll} className='flex mt-4'>
+                        <div onClick={handlePayroll} className='flex mt-4 forHover'>
                             <p>Payroll</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleDayLabourReport} className='flex mt-4'>
+                        <div onClick={handleDayLabourReport} className='flex mt-4 forHover'>
                             <p>Daily Labour Report</p>
                             <img src={rightArrow} alt="" />
                         </div>
@@ -160,10 +160,6 @@ const HumanResources = () => {
                     </div>
                 </div>
             </div> : <div>
-                {
-                    employeeDetails && <EmployeesDetails setEmployeeDetails={setEmployeeDetails} setAttedance={setAttedance} setLeaveManagement={setLeaveManagement} setOfferLettter={setOfferLettter} setServiceRecordLetter={setServiceRecordLetter} setHandoverFormalLetter=   {setHandoverFormalLetter} setPayroll={setPayroll} setDayLabourReport={setDayLabourReport}></EmployeesDetails>
-                }
-
                 {
                     attedance && <Attedance setEmployeeDetails={setEmployeeDetails} setAttedance={setAttedance} setLeaveManagement={setLeaveManagement} setOfferLettter={setOfferLettter} setServiceRecordLetter={setServiceRecordLetter} setHandoverFormalLetter={setHandoverFormalLetter} setPayroll={setPayroll} setDayLabourReport={setDayLabourReport} data={['Create', 'Edit/View/Delete', 'Register']}></Attedance>
                 }

@@ -12,7 +12,7 @@ const CreateProject = ({setCreateProjects}) => {
             {
                 <div>
                 <div>
-                    <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-4xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                 </div>
                 <h1 className='mb-12 text-3xl'>Create Project</h1>
                 <div class="card flex justify-center shadow-2xl bg-white">

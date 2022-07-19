@@ -33,17 +33,17 @@ const StakeholderMGT = () => {
                             <div className='GRN'></div>
                             <h2 class="card-title">Stakeholder Management</h2>
                         </div>
-                        <div onClick={handleClient} className='flex mt-4'>
+                        <div onClick={handleClient} className='flex mt-4 forHover'>
                             <p>Client</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleVendor} className='flex mt-4'>
+                        <div onClick={handleVendor} className='flex mt-4 forHover'>
                             <p>Vendor</p>
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div onClick={handleAgent} className='flex mt-4'>
+                        <div onClick={handleAgent} className='flex mt-4 forHover'>
                             <p>Agency</p>
                             <img src={rightArrow} alt="" />
                         </div>
