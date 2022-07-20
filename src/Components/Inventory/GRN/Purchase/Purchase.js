@@ -179,7 +179,7 @@ const Purchase = () => {
     return (
         <div className='inventory-card'>
            {
-            (!RequisitionStatus && !CreateOrderPurchase && !OrderPurchaseAmendment && !OrderPurchaseStatus && !RequisitionLeadTimeAnalysis && !RequestQuotation && !VendorPurchaseRegister && !ComparativePurchaseStatement && !PBGproformaInvoiceDetail && !BudgetVSAllocated && !PDCLCdetails) ?  <div className='mx-16 mt-24'>
+            (!RequisitionStatus && !CreateOrderPurchase && !OrderPurchaseAmendment && !OrderPurchaseStatus && !RequisitionLeadTimeAnalysis && !RequestQuotation && !VendorPurchaseRegister && !ComparativePurchaseStatement && !PBGproformaInvoiceDetail && !BudgetVSAllocated && !PDCLCdetails) ?  <div className='  mx-16 mt-24'>
             <div class="card flex justify-center bg-white shadow-2xl">
                 <div class="card-body">
                     <div className='flex items-center'>

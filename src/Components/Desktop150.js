@@ -194,7 +194,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                 <div class="drawer-side">
                     <label for="my-drawer-2" class="drawer-overlay"></label>
 
-                    <ul class="menu overflow-y-auto w-80 text-base-content Overlap h-full shadow-purple-300 bg-white">
+                    <ul class="menu w-80 text-base-content Overlap h-full shadow-purple-300 bg-white">
 
                         <div className='shadow-purple-300'>
                             <div>

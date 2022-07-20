@@ -6,7 +6,7 @@ const CreateCashFlowPlanned = ({setCurve}) => {
     }
     return (
         <div className='w-100'>
-                <div className='mx-16 mt-24'>
+                <div className='  mx-16 mt-24'>
                     <div>
                         <i onClick={handleGetBack} class="fa-solid fa-arrow-left left-arrow text-4xl"></i>
                     </div>

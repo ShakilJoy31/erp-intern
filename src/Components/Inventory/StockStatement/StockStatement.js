@@ -60,7 +60,7 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
 }
     return (
         <div>
-            <div className='mx-16 mt-24'>
+            <div className='  mx-16 mt-24'>
                 {
                     (!individulProject && !allProject && !editStockStatement && !register && !projectWiseReportStockStatement) ?
             <div>

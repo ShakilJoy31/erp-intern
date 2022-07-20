@@ -110,7 +110,7 @@ const HumanResources = () => {
     return (
         <div className='inventory-card'>
             {
-                (!employeeDetails && !attedance && !leaveManagement && !offerLettter && !serviceRecordLetter && !handoverFormalLetter && !payroll && !dayLabourReport) ? <div className='mx-16 mt-24'>
+                (!employeeDetails && !attedance && !leaveManagement && !offerLettter && !serviceRecordLetter && !handoverFormalLetter && !payroll && !dayLabourReport) ? <div className='  mx-16 mt-24'>
                 <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>

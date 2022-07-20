@@ -35,7 +35,7 @@ const TransferNote = ({data, setGin, setGrn, setTransferNote, setStockStatement,
     return (
         <div>
             {
-                (!create && !editGRN && ! register) ? <div className='mx-16 mt-24'>
+                (!create && !editGRN && ! register) ? <div className='  mx-16 mt-24'>
                     <div onClick={handleGetBack} className='left-arrow'>
                         <i class="fa-solid fa-arrow-left text-4xl"></i>
                         </div>

@@ -16,7 +16,7 @@ const Billing = () => {
     return (
         <div className='inventory-card'>
             {
-                (!clientMeasurementSheet && !subcontractorMeasurementSheet) ? <div className='mx-16 mt-24'>
+                (!clientMeasurementSheet && !subcontractorMeasurementSheet) ? <div className='  mx-16 mt-24'>
                 <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>

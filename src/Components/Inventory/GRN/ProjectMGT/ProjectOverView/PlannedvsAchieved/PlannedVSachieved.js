@@ -26,7 +26,7 @@ const PlannedVSachieved = ({ setScurve, setPlanned, setEstimated, setCashflow, s
         }
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
             {
                 (!create && !edit) ? <div>
                 <div>

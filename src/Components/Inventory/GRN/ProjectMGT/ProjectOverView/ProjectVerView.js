@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import rightArrow from './../../../../icons/Vector (8).svg';
 import CreatedCashFlowPlanned from './CashFlowVSactual/CreatedCashFlowPlanned';
 import PlannedVSachieved from './PlannedvsAchieved/PlannedVSachieved';
+import CreatedProjectContribution from './ProjectContribution/CreatedProjectContribution';
 import CreateScurve from './SCurve/CreateScurve';
 
 const ProjectVerView = ({ data, setProject, setClientBOQ, setUploadDocuments, setProjectSalient, setLabourProductivity, setClientBill, setProjectCost, setPurchaseRequisition, setInternalProgress, setClientProgress, setProjectOverView, setWeeklyFund, setPaymentProposal, setClientBillStatus, setVendorBill }) => {
@@ -45,7 +46,7 @@ const ProjectVerView = ({ data, setProject, setClientBOQ, setUploadDocuments, se
         else if (getString === 'Estimated Cost VS Actual Cost') {
             setScurve('');
             setPlanned('');
-            setEstimated(getString);
+            setEstimated('');
             setCashflow('');
             setProjectContribution('');
         }
@@ -66,7 +67,7 @@ const ProjectVerView = ({ data, setProject, setClientBOQ, setUploadDocuments, se
         }
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
             {
                 (!sCurve && !planned && !estimated && !cashFlow && !projectContribution) ? <div>
                 <div>
@@ -102,6 +103,9 @@ const ProjectVerView = ({ data, setProject, setClientBOQ, setUploadDocuments, se
                 }
                 {
                     cashFlow && <CreatedCashFlowPlanned setScurve={setScurve} setPlanned={setPlanned} setEstimated={setEstimated} setCashflow={setCashflow} setProjectContribution={setProjectContribution}></CreatedCashFlowPlanned>
+                }
+                {
+                    projectContribution && <CreatedProjectContribution setScurve={setScurve} setPlanned={setPlanned} setEstimated={setEstimated} setCashflow={setCashflow} setProjectContribution={setProjectContribution}></CreatedProjectContribution>
                 }
                 
             </div>

@@ -24,7 +24,7 @@ const AgewiseAnalysisofStock = ({data, setGin, setGrn, setTransferNote, setStock
     return (
         <div>
             {
-                (!ageWiseIndividualProject && !ageWiseAllProject) ? <div className='mx-16 mt-24'>
+                (!ageWiseIndividualProject && !ageWiseAllProject) ? <div className='  mx-16 mt-24'>
                 <div onClick={handleGetBack} className='left-arrow'>
                         <i class="fa-solid fa-arrow-left text-4xl"></i>
                     </div>

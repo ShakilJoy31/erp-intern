@@ -43,7 +43,7 @@ const PurchaseRequisition = ({data, setProject, setClientBOQ, setUploadDocuments
         } 
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
                     {
                         (!create && !edit && !register) ? <div>
                         <div>

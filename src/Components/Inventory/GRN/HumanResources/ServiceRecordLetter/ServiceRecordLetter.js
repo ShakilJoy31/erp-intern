@@ -37,7 +37,7 @@ const ServiceRecordLetter = ({data,  setEmployeeDetails, setAttedance, setLeaveM
     return (
         <div>
             {
-                (!create && !editGRN && ! register) ? <div className='mx-16 mt-24'>
+                (!create && !editGRN && ! register) ? <div className='  mx-16 mt-24'>
                     <div>
                         <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                         </div>

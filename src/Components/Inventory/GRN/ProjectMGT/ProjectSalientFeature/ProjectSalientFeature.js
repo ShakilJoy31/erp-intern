@@ -43,7 +43,7 @@ const ProjectSalientFeature = ({data, setProject, setClientBOQ, setUploadDocumen
         } 
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
                     {
                         (!create && !register && !edit) ? <div>
                         <div>

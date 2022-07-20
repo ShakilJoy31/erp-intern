@@ -33,7 +33,7 @@ const LiabilityStatement = ({ setDailyMeasurement, setPRPO, setPrestart, setBill
         }
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
             {
                 (!create && !edit && !register) ? <div>
                 <div>

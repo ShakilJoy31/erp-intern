@@ -36,7 +36,7 @@ const ClientBOQ = ({data, setProject, setClientBOQ, setUploadDocuments, setProje
         
     }
     return (
-        <div className='mx-16 mt-24'>
+        <div className='  mx-16 mt-24'>
                     {
                         (!create && !edit) ? <div>
                         <div>

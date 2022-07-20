@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../icons/Vector (8).svg';
+import ClientBillStatus from './ClientBillStatus/ClientBillStatus';
+import CreatedCliendBillStatus from './ClientBillStatus/CreatedCliendBillStatus';
 import AllSubConTractorReport from './ClientBillSubContractorBill/AllSubConTractorReport';
 import ClientBOQ from './ClientBOQ/ClientBOQ';
 import ClientProgressReport from './ClientProgressReport/ClientProgressReport';
@@ -12,6 +14,7 @@ import ProjectVerView from './ProjectOverView/ProjectVerView';
 import ProjectSalientFeature from './ProjectSalientFeature/ProjectSalientFeature';
 import PurchaseRequisition from './PurchaseRequisition/PurchaseRequisition';
 import UploadDocuments from './UploadDocuments/UploadDocuments';
+import CreatedVendorBill from './VendorBill/CreatedVendorBill';
 import WeeklySiteFund from './WeeklySiteFund/WeeklySiteFund';
 
 const ProjectMGT = () => {
@@ -251,6 +254,24 @@ const ProjectMGT = () => {
         setClientBillStatus('')
         setVendorBill('')
     }
+
+    const handleClientBillStatus = () => {
+        setProject('')
+        setClientBOQ('')
+        setUploadDocuments('')
+        setProjectSalient('')
+        setLabourProductivity('')
+        setClientBill('')
+        setProjectCost('')
+        setPurchaseRequisition('')
+        setInternalProgress('')
+        setClientProgress('')
+        setProjectOverView('')
+        setWeeklyFund('')
+        setPaymentProposal('')
+        setClientBillStatus('setClientBillStatus')
+        setVendorBill('')
+    }
     const handleVendorBillStatus = () => {
         setProject('')
         setClientBOQ('')
@@ -271,7 +292,7 @@ const ProjectMGT = () => {
     return (
         <div className='inventory-card'>
             {
-                (!project && !clientBOQ && !uploadDocuments && !projectSalient && !labourProductivity && !clientBill && !projectCost && !purchaseRequisition && !internalProgress && !clientProgress && !projectOverview && !weeklyFund && !paymentProposal && !vendorBill) ? <div className='mx-16 mt-24'>
+                (!project && !clientBOQ && !uploadDocuments && !projectSalient && !labourProductivity && !clientBill && !projectCost && !purchaseRequisition && !internalProgress && !clientProgress && !projectOverview && !weeklyFund && !paymentProposal && !vendorBill && !clientBillStatus) ? <div className='  mx-16 mt-24'>
                 <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
@@ -343,7 +364,7 @@ const ProjectMGT = () => {
                             <img src={rightArrow} alt="" />
                         </div>
                         <hr />
-                        <div className='flex forHover'>
+                        <div onClick={handleClientBillStatus} className='flex forHover'>
                             <p className='my-2'>Client Bill Status</p>
                             <img src={rightArrow} alt="" />
                         </div>
@@ -390,7 +411,7 @@ const ProjectMGT = () => {
                     projectOverview && <ProjectVerView setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['S-Curve', 'Planned Vs Achieved Progress', 'Estimated Cost VS Actual Cost', 'Cash Flow Planned Vs Actual', 'Project Contribution']}></ProjectVerView>
                 }
                 {
-                    weeklyFund && <WeeklySiteFund setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['Create', 'Edit/View/Register']}></WeeklySiteFund>
+                    weeklyFund && <WeeklySiteFund setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['Create', 'Edit/View/Delete']}></WeeklySiteFund>
                 }
                 {
                     paymentProposal && <PaymentProposal setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['Create', 'Edit/View/Register']}></PaymentProposal>
@@ -398,9 +419,12 @@ const ProjectMGT = () => {
                 {
                     clientBill && <AllSubConTractorReport setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></AllSubConTractorReport>
                 }
+
                 {
-                    vendorBill && <vendorBill setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></vendorBill>
-                    // Different style
+                    clientBillStatus && <CreatedCliendBillStatus setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></CreatedCliendBillStatus>
+                }
+                {
+                    vendorBill && <CreatedVendorBill setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></CreatedVendorBill>
                 }
             </div>
             }

@@ -10,7 +10,7 @@ const RegisterStockStatement = ({setprojectWiseReportStockStatement, setEditTran
     }
     return (
         <div className='w-100'>
-            <div className='mx-16 mt-24'>
+            <div className='  mx-16 mt-24'>
                 <div onClick={handleGetBack} className='left-arrow'>
                     <i class="fa-solid fa-arrow-left text-4xl"></i>
                 </div>
