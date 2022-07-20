@@ -1,0 +1,29 @@
+.forget-password{
+    font-size: 16px;
+    color: #366E83;
+}
+.login-button{
+    background-color: #3A67D2;
+    color: white;
+    border-radius: 10px;
+    border: 0;
+}
+.login-input{
+    border-radius: 10px;
+}
+.background-login-image{
+    background-image: url('./../../icons/unsplash_ipH7NTgLuNs.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-size: 318px 284px; */
+}
+.input-field-get-position{
+    margin-left: 359px;
+    margin-top: 149px;
+    margin-bottom: 331px;
+    margin-right: 167px;
+}
+.login-picture{
+    width: 516px;
+    height: 340px;
+}
