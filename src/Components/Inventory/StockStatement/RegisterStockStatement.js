@@ -14,7 +14,7 @@ const RegisterStockStatement = ({setprojectWiseReportStockStatement, setEditTran
                 <div onClick={handleGetBack} className='left-arrow'>
                     <i class="fa-solid fa-arrow-left text-4xl"></i>
                 </div>
-                <div class="card flex justify-center shadow-2xl bg-white">
+                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

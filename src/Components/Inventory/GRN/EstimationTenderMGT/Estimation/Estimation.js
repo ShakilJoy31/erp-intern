@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../../icons/Vector (8).svg'; 
+import CreateItemAnalysis from './ItemAnalysis/CreateItemAnalysis';
 import CreateRateAnalysis from './RateAnalysis/CreateRateAnalysis';
+import CreatedTenderRateAnalysis from './TenderEstimation/CreatedTenderRateAnalysis';
+
 
 const Estimation = ({setTender, setBoq, setEstimation, setBilling, data}) => {
     const [rateAnalysis, setRateAnalysis] = useState(''); 
@@ -30,13 +33,13 @@ const Estimation = ({setTender, setBoq, setEstimation, setBilling, data}) => {
         }
     }
     return (
-        <div className='mt-24 '>
+        <div className='mt-24 ml-16'>
             {
                 (!rateAnalysis && !tenderEstimation && !itemAnalysis) ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-3xl left-arrow"></i>
                     </div>
-            <div class="card flex justify-center shadow-2xl bg-white">
+            <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                 <div class="card-body">
                 
                     <div>
@@ -59,10 +62,13 @@ const Estimation = ({setTender, setBoq, setEstimation, setBilling, data}) => {
             </div>
                 </div>  : <div>
                     {
-                        rateAnalysis && <CreateRateAnalysis></CreateRateAnalysis>
+                        rateAnalysis && <CreateRateAnalysis setRateAnalysis={setRateAnalysis} setTenderEstimation={setTenderEstimation} setItemAnalysis={setItemAnalysis} data={['Create', 'View', 'Register']}></CreateRateAnalysis>
                     }
                     {
-                        
+                        tenderEstimation && <CreatedTenderRateAnalysis setRateAnalysis={setRateAnalysis} setTenderEstimation={setTenderEstimation} setItemAnalysis={setItemAnalysis} data={['Create', 'Edit/View/Delete', 'Register']}></CreatedTenderRateAnalysis>
+                    }
+                    {
+                        itemAnalysis && <CreateItemAnalysis setRateAnalysis={setRateAnalysis} setTenderEstimation={setTenderEstimation} setItemAnalysis={setItemAnalysis} data={['Create', 'Edit/View/Delete']}></CreateItemAnalysis>
                     }
                 </div>
             }

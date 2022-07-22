@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
 import Register from './Register';
 
-const RegisteredProject = ({ setEdited }) => {
-    const [register, setRegister] = useState(''); 
+const RegisteredProject = ({ setCreate, setEdit, setRegister }) => {
+    const [register, setRegistered] = useState(''); 
     const handleGetBack = () =>{
-        setEdited(''); 
+        setCreate('');
+        setEdit('');
+        setRegister('');
     }
     const handleCreate = () =>{
-        setRegister('setEdited'); 
+        setRegistered('setEdited'); 
     }
     return (
         <div className='w-100'>
@@ -17,7 +19,7 @@ const RegisteredProject = ({ setEdited }) => {
                 <div onClick={handleGetBack} className='left-arrow'>
                     <i class="fa-solid fa-arrow-left text-3xl"></i>
                 </div>
-                <div class="card flex justify-center shadow-2xl bg-white">
+                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

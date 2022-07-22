@@ -7,16 +7,17 @@ const AllEstimationTender = ({ setCreate, setEdit, setRegister }) => {
         setCreateTender('setCreateTender'); 
     }
     const handleGetBack = () =>{
-        setCreate('')
-        setEdit('')
-        setRegister('')
+        console.log('clicked');
+        setCreate('');
+        setEdit('');
+        setRegister('');
     }
     return (
         <div className='mt-12'>
         {
             !createTender ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                 </div>
                 <div className='flex items-center ms-12'>
                     <h1 className='mb-10 text-3xl'>New Project</h1>
@@ -24,11 +25,11 @@ const AllEstimationTender = ({ setCreate, setEdit, setRegister }) => {
                     <div className='flex items-center justify-end mb-8 add-projects'>
                         <input type="text" placeholder="Type here" class="input max-w-xs border border-info hover:border-error mr-16" />
 
-                        <button onClick={handleCreateProject} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Internal Progress Report</button>
+                        <button onClick={handleCreateProject} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Add New</button>
 
                     </div>
                 </div>
-                <div class="card flex justify-center shadow-2xl bg-white">
+                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div class="overflow-x-auto">
                             <table class="table w-full">

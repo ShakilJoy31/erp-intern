@@ -40,7 +40,7 @@ const ClientProgressReport = ({ setProject, setClientBOQ, setUploadDocuments, se
 
                 </div>
                 </div>
-                <div class="card flex justify-center shadow-2xl bg-white">
+                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div class="overflow-x-auto">
                             <table class="table w-full">

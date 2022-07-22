@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreatedRateAnalysis = () => {
+const AllBillingSchedule = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const CreatedRateAnalysis = () => {
     );
 };
 
-export default CreatedRateAnalysis;
+export default AllBillingSchedule;

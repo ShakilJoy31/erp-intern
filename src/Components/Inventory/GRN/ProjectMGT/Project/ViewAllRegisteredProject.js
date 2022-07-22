@@ -12,7 +12,7 @@ const ViewAllRegisteredProject = ({setViewEditedProject}) => {
                         <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                     </div>
                     <h1 className='mb-12 text-3xl'>Create Projects</h1>
-                    <div class="card flex justify-center shadow-2xl bg-white">
+                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                         <div class="card-body">
                             <div class="overflow-x-auto">
                                 <table class="table w-full">

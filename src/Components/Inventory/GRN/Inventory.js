@@ -32,7 +32,7 @@ const Inventory = ({setGin, setGrn, setTransferNote, setStockStatement,setAgewis
                     {
                     (!setGin[0] && !setGrn[0] && !setTransferNote[0] && !setStockStatement[0] && !setAgewiseANofStock[0]) ? <div className=''>
                         
-                    <div class="card flex justify-center shadow-2xl bg-white">
+                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>
