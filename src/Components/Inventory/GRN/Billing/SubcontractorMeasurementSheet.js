@@ -3,6 +3,7 @@ import rightArrow from './../../../icons/Vector (8).svg';
 import { useState } from 'react';
 import CreateSubContractorMeasurement from './Create/CreateSubContractorMeasurement';
 import EditSubContractoeMeasurement from './Edit/EditSubContractoeMeasurement';
+import RegisterSubContractor from './RegisterSubContractor';
 
 const SubcontractorMeasurementSheet = ({data, setClientMeasurementSheet, setsubcontractorMeasurementSheet}) => {
     const [create, setCreate] = useState(''); 
@@ -33,7 +34,7 @@ const SubcontractorMeasurementSheet = ({data, setClientMeasurementSheet, setsubc
     return (
         <div>
             {
-                (!create && !edit && !deleteMeasurement) ? <div className='  mx-16 mt-24'>
+                (!create && !edit && !deleteMeasurement) ? <div className='mx-16 mt-24 '>
                 <div>
                     <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                     </div>
@@ -59,10 +60,13 @@ const SubcontractorMeasurementSheet = ({data, setClientMeasurementSheet, setsubc
             </div>
         </div> : <div>
             {
-                create && <CreateSubContractorMeasurement setCreate={setCreate} setEdit={setEdit}></CreateSubContractorMeasurement>
+                create && <CreateSubContractorMeasurement setCreate={setCreate} setEdit={setEdit} setDeleteMeasurement={setDeleteMeasurement}></CreateSubContractorMeasurement>
             }
             {
-                edit && <EditSubContractoeMeasurement setCreate={setCreate} setEdit={setEdit}></EditSubContractoeMeasurement>
+                edit && <EditSubContractoeMeasurement setCreate={setCreate} setEdit={setEdit} setDeleteMeasurement={setDeleteMeasurement}></EditSubContractoeMeasurement>
+            }
+            {
+                deleteMeasurement && <RegisterSubContractor setCreate={setCreate} setEdit={setEdit} setDeleteMeasurement={setDeleteMeasurement}></RegisterSubContractor>
             }
         </div>  
             }

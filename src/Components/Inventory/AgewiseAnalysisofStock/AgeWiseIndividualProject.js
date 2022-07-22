@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
+import IndivisualProjects from './IndivisualProjects';
 
 const AgeWiseIndividualProject = ({setAgeWiseIndividualProject, setAgeWiseAllProject}) => {
+    const [individul, setIndividul] = useState(''); 
     const handleGetBack = () =>{
         setAgeWiseIndividualProject(''); 
         setAgeWiseAllProject(''); 
     }
+    const handleCreate = () =>{
+        setIndividul('setIndividul'); 
+    }
     return (
         <div className='w-100'>
-            <div className='  mx-16 mt-24'>
-            <div onClick={handleGetBack} className='left-arrow'>
+            <div className='mx-16 mt-24 '>
+                {
+                    (!individul) ? <div>
+                    <div onClick={handleGetBack} className='left-arrow'>
                             <i class="fa-solid fa-arrow-left text-4xl"></i>
                             </div>
                 <div class="card flex justify-center box-shadow shadow-2xl bg-white">
@@ -57,9 +64,15 @@ const AgeWiseIndividualProject = ({setAgeWiseIndividualProject, setAgeWiseAllPro
 
                     </div>
                 </div>
+            <button onClick={handleCreate} style={{backgroundColor: '#7E76CA', width:'235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px'}} class="create-button btn block text-white mx-auto ">Register</button>
+            </div> : <div>
+                {
+                    individul && <IndivisualProjects setIndividul={setIndividul}></IndivisualProjects>
+                }
             </div>
-            <button style={{backgroundColor: '#7E76CA', width:'235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px'}} class="create-button btn block text-white mx-auto ">Register</button>
-        </div>
+                }
+                </div>
+            </div>
     );
 };
 

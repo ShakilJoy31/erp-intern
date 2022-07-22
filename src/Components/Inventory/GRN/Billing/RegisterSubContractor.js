@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
-import AllSubcontractor from './AllSubcontractor';
+import AllRegisteredSubContractor from './AllRegisteredSubContractor';
 
-const CreateSubContractorMeasurement = ({setCreate, setEdit }) => {
+const RegisterSubContractor = ({ setCreate, setEdit, setDeleteMeasurement}) => {
     const [sub, setSub] = useState(''); 
     const handleGetBack = () => {
         setCreate('');
         setEdit('');
+        setDeleteMeasurement('');
     }
     const handleCreate = () =>{
         setSub('setSub'); 
@@ -75,7 +76,7 @@ const CreateSubContractorMeasurement = ({setCreate, setEdit }) => {
                 <button onClick={handleCreate} class="create-button btn block text-white mx-auto action-button">Search</button>
                     </div> : <div>
                         {
-                            sub && <AllSubcontractor setSub={setSub}></AllSubcontractor>
+                            sub && <AllRegisteredSubContractor setSub={setSub}></AllRegisteredSubContractor>
                         }
                     </div>
                 }
@@ -84,4 +85,4 @@ const CreateSubContractorMeasurement = ({setCreate, setEdit }) => {
     );
 };
 
-export default CreateSubContractorMeasurement;
+export default RegisterSubContractor;

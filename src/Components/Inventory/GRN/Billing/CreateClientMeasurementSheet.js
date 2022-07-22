@@ -33,7 +33,7 @@ const CreateClientMeasurementSheet = ({data, setClientMeasurementSheet, setsubco
     return (
         <div>
             {
-                (!create && !edit && !register) ? <div className='  mx-16 mt-24'>
+                (!create && !edit && !register) ? <div className='mx-16 mt-24 '>
                 <div onClick={handleGetBack} className='left-arrow'>
                     <i class="fa-solid fa-arrow-left text-4xl"></i>
                     </div>
@@ -59,13 +59,13 @@ const CreateClientMeasurementSheet = ({data, setClientMeasurementSheet, setsubco
             </div>
         </div> : <div>
             {
-                create && <CreateClientMeasurement setCreate={setCreate} setEdit={setEdit}></CreateClientMeasurement>
+                create && <CreateClientMeasurement setCreate={setCreate} setEdit={setEdit} setRegister={setRegister}></CreateClientMeasurement>
             }
             {
-                edit && <EditClientMeasurement setCreate={setCreate} setEdit={setEdit}></EditClientMeasurement>
+                edit && <EditClientMeasurement setCreate={setCreate} setEdit={setEdit} setRegister={setRegister}></EditClientMeasurement>
             }
             {
-                register && <RegisterDailyMeasurement setCreate={setCreate} setEdit={setEdit}></RegisterDailyMeasurement>
+                register && <RegisterDailyMeasurement setCreate={setCreate} setEdit={setEdit} setRegister={setRegister}></RegisterDailyMeasurement>
             }
         </div>  
             }
