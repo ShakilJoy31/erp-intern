@@ -213,30 +213,35 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                                 <div className='flex items-center mb-6 justify center'>
                                     <img className='mx-4' src={executiveDashboard} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/executiveDashboard'>Executive Dashboard</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={executiveDashboard} alt="" />
                                 </div>
 
                                 <div onClick={handleInventory} className={`flex items-center mb-6 justify center ${inventory ? 'for-linear-background' : ''} `}>
                                     <div className={`${inventory ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={inventorysvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard'>Inventory</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={inventorysvg} alt="" />
                                 </div>
 
                                 <div onClick={handlePurchase} className={`flex items-center mb-6 justify center ${purchase ? 'for-linear-background' : ''} `}>
                                     <div className={`${purchase ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={purchasesvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/purchase'>Purchase</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={purchasesvg} alt="" />
                                 </div>
 
                                 <div onClick={handleBilling} className={`flex items-center mb-6 justify center ${billing ? 'for-linear-background' : ''} `}>
                                     <div className={`${billing ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={billingsvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/billing'>Billing</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={billingsvg} alt="" />
                                 </div>
 
                                 <div onClick={handleHumanResource} className={`flex items-center mb-6 justify center ${humanResource ? 'for-linear-background' : ''} `}>
                                     <div className={`${humanResource ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={humanResourcesvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/humanResources'>Human Resources</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={humanResourcesvg} alt="" />
                                 </div>
 
                                 <label onClick={handleToggleButton} for="my-drawer-2" className='ml-4 btn btn-circle sidebar anisidebar toggle-button'>
@@ -249,29 +254,34 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                                     <div className={`${stakeholderMGT ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={stockHoldersvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/stakeholderMGT'>Stakeholder MGT</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={stockHoldersvg} alt="" />
                                 </div>
 
                                 <div onClick={handleEstimation} className={`flex items-center mb-6 justify center ${estimation ? 'for-linear-background' : ''} `}>
                                     <div className={`${estimation ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={estimationsvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/estimationTenderMGT'>Estimation & Tender MGT</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={estimationsvg} alt="" />
                                 </div>
 
                                 <div onClick={handleProjectMGT} className={`flex items-center mb-6 justify center ${projectMGT ? 'for-linear-background' : ''} `}>
                                     <div className={`${projectMGT ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={projectMGTsvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/projectMGT'>Project MGT</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={projectMGTsvg} alt="" />
                                 </div>
 
                                 <div onClick={handlePlanning} className={`flex items-center mb-6 justify center ${planning ? 'for-linear-background' : ''} `}>
                                     <div className={`${planning ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={planningsvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/planning'>Planning</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={planningsvg} alt="" />
                                 </div>
                                 <div onClick={handleFinance} className={`flex items-center mb-6 justify center ${finance ? 'for-linear-background' : ''} `}>
                                     <div className={`${finance ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={financesvg} alt="" />
                                     <Link className='w-full text-size' to='/dashboard/financeAccount'>Finance & Accounting</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={financesvg} alt="" />
                                 </div>
                             </div>
 
