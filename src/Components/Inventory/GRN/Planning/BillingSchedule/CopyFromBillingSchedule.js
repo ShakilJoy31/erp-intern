@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import ListOfCreatedProject from './ListOfCreatedProject';
 
 
-const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
+const CopyFromBillingSchedule = ({ setRegister, setEditGRN, setCreate }) => {
     const [register, setRegistered] = useState(''); 
     const handleGetBack = () =>{
         setRegister('')
@@ -10,7 +9,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
         setCreate('')
     }
     const handleCreate = () =>{
-        setRegistered('setRegistered');
+        setRegistered('');
     }
     return (
         <div className='w-100'>
@@ -24,7 +23,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>
-                                <h2 class="card-title">Create Project Milestone</h2>
+                                <h2 class="card-title">Copy From Billing Schedule</h2>
                             </div>
     
                             <div>
@@ -57,9 +56,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                     </div>
                 <button onClick={handleCreate}  class="create-button btn block text-white mx-auto action-button">Create</button>
                     </div> : <div>
-                        {
-                            register && <ListOfCreatedProject setRegistered={setRegistered}></ListOfCreatedProject>
-                        }
+                        
                     </div>
                 }
             </div>
@@ -67,4 +64,4 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
     );
 };
 
-export default CreateProjectMilestone;
+export default CopyFromBillingSchedule;

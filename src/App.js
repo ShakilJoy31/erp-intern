@@ -27,7 +27,7 @@ function App() {
       <Navbar></Navbar>
       <div className='body-background-color'>
       <Routes>
-        <Route path="/" element={<Desktop150 />} />
+        <Route path="/dashboard" element={<Desktop150 />} />
         <Route>
           <Route
             path="/dashboard"
@@ -87,7 +87,7 @@ function App() {
             ></Route>
           </Route>
         </Route>
-        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/" element={<Login></Login>}></Route>
       </Routes>
       </div>
     </div>

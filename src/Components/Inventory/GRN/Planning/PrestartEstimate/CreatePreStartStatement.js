@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import ListOfCreatedProject from './ListOfCreatedProject';
 
 
-const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
+const CreatePreStartStatement = ({ setRegister, setEditGRN, setCreate }) => {
     const [register, setRegistered] = useState(''); 
     const handleGetBack = () =>{
         setRegister('')
@@ -10,7 +9,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
         setCreate('')
     }
     const handleCreate = () =>{
-        setRegistered('setRegistered');
+        setRegistered('');
     }
     return (
         <div className='w-100'>
@@ -24,22 +23,14 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>
-                                <h2 class="card-title">Create Project Milestone</h2>
+                                <h2 class="card-title">Create Prestart Statement</h2>
                             </div>
     
                             <div>
                                 <div>
     
-                                <div className='flex'>
-                                    <div class="form-control w-80 max-w-lg mr-12 text-input">
-                                        <label class="label">
-                                            <span class="label-text">Project Code</span>
-                                            
-                                        </label>
-                                        <input type="text" placeholder="Project Code" class="input w-100 max-w-lg border border-info hover:border-error" />
-                                        
-                                    </div>
-                                    <div class="form-control w-80 max-w-lg text-input">
+                                <div className='flex justify-between'>
+                                    <div class="form-control w-full max-w-lg text-input">
                                         <label class="label">
                                             <span class="label-text">Project Code</span>
                                             
@@ -58,7 +49,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                 <button onClick={handleCreate}  class="create-button btn block text-white mx-auto action-button">Create</button>
                     </div> : <div>
                         {
-                            register && <ListOfCreatedProject setRegistered={setRegistered}></ListOfCreatedProject>
+                            
                         }
                     </div>
                 }
@@ -67,4 +58,4 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
     );
 };
 
-export default CreateProjectMilestone;
+export default CreatePreStartStatement;

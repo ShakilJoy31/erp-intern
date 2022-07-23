@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ListOfAllCreatedLiabilityStatement from './ListOfAllCreatedLiabilityStatement';
 
 const CreateLiabilityStatement = ( {setRegister, setEditGRN, setCreate }) => {
+    const [create, setCreated] = useState(''); 
     const handleGetBack = () =>{
         setRegister(''); 
         setEditGRN(''); 
         setCreate(''); 
     }
+    const handleCreate = () =>{
+        setCreated('setCreated'); 
+    }
     return (
         <div className='w-100'>
-            <div className='  mx-16 mt-24'>
+            <div className='mt-24'>
+               {
+                (!create) ?  <div>
                 <div onClick={handleGetBack} className='left-arrow'>
                     <i class="fa-solid fa-arrow-left text-4xl"></i>
                 </div>
@@ -49,8 +56,14 @@ const CreateLiabilityStatement = ( {setRegister, setEditGRN, setCreate }) => {
 
                     </div>
                 </div>
+            <button onClick={handleCreate} class="create-button btn block text-white mx-auto action-button">Create</button>
+                </div> : <div>
+                    {
+                        create && <ListOfAllCreatedLiabilityStatement setCreated={setCreated}></ListOfAllCreatedLiabilityStatement>
+                    }
+                </div>
+               }
             </div>
-            <button  class="create-button btn block text-white mx-auto action-button">Create</button>
         </div>
     );
 };

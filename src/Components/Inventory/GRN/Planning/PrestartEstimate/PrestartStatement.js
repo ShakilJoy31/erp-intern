@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../../icons/Vector (8).svg'; 
+import CreatePreStartStatement from './CreatePreStartStatement';
+import EditPrestartStatement from './EditPrestartStatement';
 
 const PrestartStatement = ({ setDailyMeasurement, setPRPO, setPrestart, setBilling, setProject, setLiability, data}) => {
     const [create, setCreate] = useState(''); 
@@ -14,12 +16,12 @@ const PrestartStatement = ({ setDailyMeasurement, setPRPO, setPrestart, setBilli
         setLiability('');
     }
     const handleCreate = (getString) =>{
-        if(getString === 'Create'){
+        if(getString === 'Create Fresh Estimate'){
            setCreate(getString); 
            setEditGRN('');
            setRegister(''); 
         }
-        else if(getString === 'Edit/View/Delete'){
+        else if(getString === 'Copy From Tender Estimation'){
             setEditGRN(getString); 
             setCreate(''); 
             setRegister('');
@@ -31,7 +33,9 @@ const PrestartStatement = ({ setDailyMeasurement, setPRPO, setPrestart, setBilli
         } 
     }
     return (
-        <div className='  mx-16 mt-24'>
+        <div className='mx-16 mt-24 '>
+                   {
+                    (!create && !editGRN && !register) ?  <div>
                     <div>
                         <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                         </div>
@@ -56,6 +60,15 @@ const PrestartStatement = ({ setDailyMeasurement, setPRPO, setPrestart, setBilli
                         }
                     </div>
                 </div>
+                    </div> : <div>
+                        {
+                            create && <CreatePreStartStatement setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CreatePreStartStatement>
+                        }
+                        {
+                            editGRN && <EditPrestartStatement setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></EditPrestartStatement>
+                        }
+                    </div>
+                   }
             </div>
     );
 };

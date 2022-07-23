@@ -1,9 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import meetingLogin from './../../icons/pana.svg';
 import './Login.css'; 
 
 const Login = () => {
+  const [email, setEmail] = useState(''); 
+  const [password, setPassWord] = useState('');
+  const navigate = useNavigate(); 
+
+  const handleEmail = (event) =>{
+    setEmail(event.target.value); 
+  }
+  const handlePassword = (event) =>{
+    setPassWord(event.target.value);  
+  }
+  const handleLogin = () =>{
+    if(email && password){
+      navigate('/dashboard'); 
+    }
+    else{
+      toast.error('Email and Password is required'); 
+    }
+  } 
+  
   return (
     <div
       style={{ backgroundColor: "#E5E5E5" }}
@@ -39,17 +60,17 @@ const Login = () => {
             </p>
 
             <div>
-              <input
+              <input onBlur={handleEmail}
                 type="text"
                 placeholder="Email or Phone Number"
-                class="input w-full max-w-lg my-[25px] login-input"
+                class="input w-full max-w-lg my-[25px] login-input" required
               />
 
               <div class="form-control w-full max-w-">
-              <input
-                type="text"
+              <input onBlur={handlePassword}
+                type="password"
                 placeholder="Password"
-                class="input w-full max-w-lg login-input"
+                class="input w-full max-w-lg login-input" required
               />
                 <label class="label flex justify-end">
                   <span class="label-text-alt forget-password forHover mb-[20px] mt-[12px]">Forget Password</span>
@@ -57,7 +78,7 @@ const Login = () => {
               </div>
             </div>
             <div>
-            <button class="btn w-full mt-2 login-button">Login</button>
+            <button onClick={handleLogin} class="btn w-full mt-2 login-button">Login</button>
             </div>
           </div>
 
@@ -69,6 +90,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

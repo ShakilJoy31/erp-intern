@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import ListOfCreatedProject from './ListOfCreatedProject';
+import TenderRateAnalysis from './TenderRateAnalysis';
 
 
-const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
+const EditPrestartStatement = ({ setRegister, setEditGRN, setCreate }) => {
     const [register, setRegistered] = useState(''); 
     const handleGetBack = () =>{
         setRegister('')
@@ -24,7 +24,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>
-                                <h2 class="card-title">Create Project Milestone</h2>
+                                <h2 class="card-title">Edit Prestart Statement</h2>
                             </div>
     
                             <div>
@@ -58,7 +58,7 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
                 <button onClick={handleCreate}  class="create-button btn block text-white mx-auto action-button">Create</button>
                     </div> : <div>
                         {
-                            register && <ListOfCreatedProject setRegistered={setRegistered}></ListOfCreatedProject>
+                            register && <TenderRateAnalysis setRegistered={setRegistered}></TenderRateAnalysis>
                         }
                     </div>
                 }
@@ -67,4 +67,4 @@ const CreateProjectMilestone = ({ setRegister, setEditGRN, setCreate }) => {
     );
 };
 
-export default CreateProjectMilestone;
+export default EditPrestartStatement;

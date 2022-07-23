@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import rightArrow from './../../../../icons/Vector (8).svg'; 
+import CopyFromBillingSchedule from './CopyFromBillingSchedule';
+import CreateBilling from './CreateBilling';
 
 const BillingSchedule = ({ setDailyMeasurement, setPRPO, setPrestart, setBilling, setProject, setLiability, data}) => {
     const [create, setCreate] = useState(''); 
@@ -14,12 +16,12 @@ const BillingSchedule = ({ setDailyMeasurement, setPRPO, setPrestart, setBilling
         setLiability('');
     }
     const handleCreate = (getString) =>{
-        if(getString === 'Create'){
+        if(getString === 'New Bill'){
            setCreate(getString); 
            setEditGRN('');
            setRegister(''); 
         }
-        else if(getString === 'Edit/View/Delete'){
+        else if(getString === 'Copy From Ref Billing Schedule'){
             setEditGRN(getString); 
             setCreate(''); 
             setRegister('');
@@ -31,31 +33,42 @@ const BillingSchedule = ({ setDailyMeasurement, setPRPO, setPrestart, setBilling
         } 
     }
     return (
-            <div className='  mx-16 mt-24'>
-                    <div>
-                        <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
-                        </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
-                    <div class="card-body">
-                    
+            <div className='mx-16 mt-24 '>
+                    {
+                        (!create && !editGRN) ? <div>
                         <div>
-                        <div className='flex items-center mt-4'>
-                        <div className='GRN'></div>
-                        <h2 class="card-title">Billing Schedule</h2>
-                    </div>
-                        </div>
+                            <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                            </div>
+                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                        <div class="card-body">
                         
-                        {
-                            data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
-                                    <p className='my-2'>{singleData}</p>
-                                    <img src={rightArrow} alt="" />
-                                </div>
-                                <hr />
-                            </div>)
-                        }
+                            <div>
+                            <div className='flex items-center mt-4'>
+                            <div className='GRN'></div>
+                            <h2 class="card-title">Billing Schedule</h2>
+                        </div>
+                            </div>
+                            
+                            {
+                                data.map(singleData => <div>
+                                    <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
+                                        <p className='my-2'>{singleData}</p>
+                                        <img src={rightArrow} alt="" />
+                                    </div>
+                                    <hr />
+                                </div>)
+                            }
+                        </div>
                     </div>
-                </div>
+                        </div> : <div>
+                            {
+                                create && <CreateBilling setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate} ></CreateBilling>
+                            }
+                            {
+                                editGRN && <CopyFromBillingSchedule setRegister={setRegister} setEditGRN={setEditGRN} setCreate={setCreate}></CopyFromBillingSchedule>
+                            }
+                        </div>
+                    }
             </div>
     );
 };
