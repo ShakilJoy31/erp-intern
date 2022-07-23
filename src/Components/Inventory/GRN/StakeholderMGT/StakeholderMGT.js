@@ -26,7 +26,7 @@ const StakeholderMGT = () => {
     return (
         <div className='inventory-card'>
             {
-                (!client && !vendor && !agency) ? <div className='  mx-16 mt-24'>
+                (!client && !vendor && !agency) ? <div className='mx-16 mt-24 '>
                 <div class="card flex bg-white justify-center shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>

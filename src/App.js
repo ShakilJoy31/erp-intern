@@ -25,6 +25,7 @@ function App() {
   return (
     <div>
       <Navbar></Navbar>
+      <div className='body-background-color'>
       <Routes>
         <Route path="/" element={<Desktop150 />} />
         <Route>
@@ -88,6 +89,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login></Login>}></Route>
       </Routes>
+      </div>
     </div>
   );
 }

@@ -292,7 +292,7 @@ const ProjectMGT = () => {
     return (
         <div className='inventory-card'>
             {
-                (!project && !clientBOQ && !uploadDocuments && !projectSalient && !labourProductivity && !clientBill && !projectCost && !purchaseRequisition && !internalProgress && !clientProgress && !projectOverview && !weeklyFund && !paymentProposal && !vendorBill && !clientBillStatus) ? <div className='  mx-16 mt-24'>
+                (!project && !clientBOQ && !uploadDocuments && !projectSalient && !labourProductivity && !clientBill && !projectCost && !purchaseRequisition && !internalProgress && !clientProgress && !projectOverview && !weeklyFund && !paymentProposal && !vendorBill && !clientBillStatus) ? <div className='mx-16 mt-24 '>
                 <div class="card flex justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
@@ -392,7 +392,7 @@ const ProjectMGT = () => {
                 }
                 {
                     labourProductivity && <LabourProductivityReport setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></LabourProductivityReport> 
-                    // Different style.
+                    
                 }
                 {
                     projectCost && <ProjectCostReport setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></ProjectCostReport>
@@ -405,7 +405,7 @@ const ProjectMGT = () => {
                 }
                 {
                     clientProgress && <ClientProgressReport setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill}></ClientProgressReport>
-                    // Different Style
+                    
                 }
                 {
                     projectOverview && <ProjectVerView setProject={setProject} setClientBOQ={setClientBOQ} setUploadDocuments={setUploadDocuments} setProjectSalient={setProjectSalient} setLabourProductivity={setLabourProductivity} setClientBill={setClientBill} setProjectCost={setProjectCost} setPurchaseRequisition={setPurchaseRequisition} setInternalProgress={setInternalProgress} setClientProgress={setClientProgress} setProjectOverView={setProjectOverView} setWeeklyFund={setWeeklyFund} setPaymentProposal={setPaymentProposal} setClientBillStatus={setClientBillStatus} setVendorBill={setVendorBill} data={['S-Curve', 'Planned Vs Achieved Progress', 'Estimated Cost VS Actual Cost', 'Cash Flow Planned Vs Actual', 'Project Contribution']}></ProjectVerView>

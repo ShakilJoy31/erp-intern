@@ -5,7 +5,7 @@ const ViewAllRegisteredProject = ({setViewEditedProject}) => {
         setViewEditedProject(''); 
     }
     return (
-        <div className='mx-16 mt-12'>
+        <div className='mt-12'>
             {
                 <div>
                     <div>

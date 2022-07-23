@@ -20,8 +20,8 @@ const ClientProgressReport = ({ setProject, setClientBOQ, setUploadDocuments, se
         setClientBillStatus('');
         setVendorBill('');
     }
-    const handleCreate = (getString) =>{
-        setCreate(getString); 
+    const handleCreateProject = () =>{
+        setCreate('getString'); 
     }
     return (
         <div className='mx-16 mt-12'>
@@ -30,14 +30,18 @@ const ClientProgressReport = ({ setProject, setClientBOQ, setUploadDocuments, se
                 <div>
                     <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
                 </div>
+                <div className='flex items-center justify-between'>
                 <div className='flex items-center ms-12'>
-                <h1 className='mb-10 text-3xl'>Client Progress Report</h1>
+                    <h1 className='mb-10 text-3xl'>Client Progress Report</h1>
 
-                <div className='flex items-center justify-end mb-8 add-projects'>
-                <input type="text" placeholder="Type here" class="input max-w-xs border border-info hover:border-error mr-12" />
+                </div>
+                <div className='flex items-center justify-between'>
+                <div className='flex items-center mb-8'>
+                        <input type="text" placeholder="Type here" class="input max-w-lg w-80 border border-info hover:border-error mr-16" />
 
-                <button onClick={handleCreate} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Add New</button>
+                        <button onClick={handleCreateProject} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Add New</button>
 
+                    </div>
                 </div>
                 </div>
                 <div class="card flex justify-center box-shadow shadow-2xl bg-white">

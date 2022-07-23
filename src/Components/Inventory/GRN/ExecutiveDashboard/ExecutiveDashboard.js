@@ -8,7 +8,7 @@ const ExecutiveDashboard = () => {
                 <div class="card-body">
                     <div className='flex'>
                     <div className='flex GRN'></div>
-                    <h2 class="card-title">GRN</h2>
+                    <h2 class="card-title">Executive Dashboard</h2>
                     </div>
                     <p className='forHover'>Create</p>
                     <hr />

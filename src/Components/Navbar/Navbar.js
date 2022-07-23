@@ -10,7 +10,7 @@ import logOut from './../icons/logOut icon.svg';
 const Navbar = () => {
     return (
         <div className='mx-4 navbarIndex'>
-            <div class="navbar bg-base-100">
+            <div class="navbar bg-white">
                 <div class="flex-1">
                     <div>
                         <Link className='text-3xl text-purple-500' to='/'>

@@ -43,7 +43,7 @@ const PurchaseRequisition = ({data, setProject, setClientBOQ, setUploadDocuments
         } 
     }
     return (
-        <div className='  mx-16 mt-24'>
+        <div className='mx-16 mt-24 '>
                     {
                         (!create && !edit && !register) ? <div>
                         <div>
@@ -60,7 +60,7 @@ const PurchaseRequisition = ({data, setProject, setClientBOQ, setUploadDocuments
                             </div>
                             
                             {
-                                data.map(singleData => <div>
+                                data?.map(singleData => <div>
                                     <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
                                         <p className='my-2'>{singleData}</p>
                                         <img src={rightArrow} alt="" />
