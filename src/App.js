@@ -1,8 +1,6 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Navbar from "./Components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Desktop150 from "./Components/Desktop150";
+import ErpModel from "./Components/ErpModel";
 import Inventory from "./Components/Inventory/GRN/Inventory/Inventory";
 import ExecutiveDashboard from "./Components/Inventory/GRN/ExecutiveDashboard/ExecutiveDashboard";
 import Purchase from "./Components/Inventory/GRN/Purchase/Purchase";
@@ -24,25 +22,24 @@ function App() {
   const [AgewiseANofStock, setAgewiseANofStock] = useState("");
   return (
     <div>
-      <Navbar></Navbar>
       <div className='body-background-color'>
       <Routes>
-        <Route path="/dashboard" element={<Desktop150 />} />
+        <Route path="/dashboard" element={<ErpModel />} />
         <Route>
           <Route
             path="/dashboard"
             element={
-              <Desktop150
+              <ErpModel
                 setGin={setGin}
                 setGrn={setGrn}
                 setTransferNote={setTransferNote}
                 setStockStatement={setStockStatement}
                 setAgewiseANofStock={setAgewiseANofStock}
-              ></Desktop150>
+              ></ErpModel>
             }
           >
             <Route
-              index
+              path='inventory'
               element={
                 <Inventory
                   setGin={[gin, setGin]}
@@ -54,7 +51,7 @@ function App() {
               }
             ></Route>
             <Route
-              path="executiveDashboard"
+              index
               element={<ExecutiveDashboard></ExecutiveDashboard>}
             ></Route>
             <Route path="purchase" element={<Purchase></Purchase>}></Route>

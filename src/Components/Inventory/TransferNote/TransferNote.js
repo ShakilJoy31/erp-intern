@@ -35,11 +35,11 @@ const TransferNote = ({data, setGin, setGrn, setTransferNote, setStockStatement,
     return (
         <div>
             {
-                (!create && !editGRN && ! register) ? <div className='  mx-16 mt-24'>
+                (!create && !editGRN && ! register) ? <div className='mx-16 mt-8 '>
                     <div onClick={handleGetBack} className='left-arrow'>
-                        <i class="fa-solid fa-arrow-left text-4xl"></i>
+                        <i class="fas text-3xl fa-long-arrow-alt-left"></i>
                         </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                     
                         <div>
@@ -50,11 +50,11 @@ const TransferNote = ({data, setGin, setGrn, setTransferNote, setStockStatement,
                         </div>
                         {
                             data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex my-2 forHover'>
-                                    <p>{singleData}</p>
+                                <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
+                                    <p className='py-4'>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>
-                                <hr />
+                                <hr className='w-screen line'></hr>
                             </div>)
                         }
                     </div>

@@ -24,15 +24,15 @@ const CreatedCliendBillStatus = ({ setProject, setClientBOQ, setUploadDocuments,
         setCurve('setCurve')
     }
     return (
-        <div className='mx-16 mt-12'>
+        <div className='mx-16 mt-8'>
             {
                 !curve ? <div>
                     <div>
-                        <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                        <i onClick={handleGetBack} class="  fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
                     </div>
                     <div className='flex items-center justify-between'>
                 <div className='flex items-center ms-12'>
-                    <h1 className='mb-10 text-3xl'>Create Client Bill</h1>
+                    <h1 className='text-3xl mb-10'>Create Client Bill</h1>
 
                 </div>
                 <div className='flex items-center mb-8'>
@@ -42,7 +42,7 @@ const CreatedCliendBillStatus = ({ setProject, setClientBOQ, setUploadDocuments,
 
                     </div>
                 </div>
-                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                    <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                         <div class="card-body">
                             <div class="overflow-x-auto">
                                 <table class="table w-full">

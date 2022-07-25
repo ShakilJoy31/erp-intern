@@ -13,13 +13,13 @@ const CreateItemAnalysis = ({ setRateAnalysis, setTenderEstimation, setItemAnaly
             setCreate('setCreate'); 
     }
     return (
-        <div className='mt-24'>
+        <div className='mt-8'>
             {
                 (!create) ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
                     </div>
-            <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+            <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                 <div class="card-body">
                 
                     <div>
@@ -32,16 +32,16 @@ const CreateItemAnalysis = ({ setRateAnalysis, setTenderEstimation, setItemAnaly
                     {
                         data.map(singleData => <div>
                             <div onClick={()=>handleCreate(singleData)} className='flex forHover'>
-                                <p className='my-2'>{singleData}</p>
+                                <p className='py-4'>{singleData}</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
+                            <hr className='w-screen line'></hr>
                         </div>)
                     }
                 </div>
             </div>
 
-            <div class="card flex justify-center box-shadow mt-12 shadow-2xl bg-white">
+            <div class="card flex box-shadow justify-center box-shadow mt-8 shadow-2xl bg-white">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

@@ -16,7 +16,7 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
     const [allProject, setAllProject] = useState(''); 
     const handleTransferNote = (getString) =>{
         if(getString === 'Individual Project'){
-            setIndividulProject(getString)
+            setIndividulProject('')
             setprojectWiseReportStockStatement(''); 
             setEditStockStatement('');
             setRegister(''); 
@@ -27,7 +27,7 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
             setprojectWiseReportStockStatement(''); 
             setEditStockStatement('');
             setRegister(''); 
-            setAllProject(getString);
+            setAllProject('');
          }
          else if(getString === 'Register Stock Statement'){
             setIndividulProject(''); 
@@ -60,15 +60,15 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
 }
     return (
         <div>
-            <div className='  mx-16 mt-24'>
+            <div className='mx-16 mt-8 '>
                 {
-                    (!individulProject && !allProject && !editStockStatement && !register && !projectWiseReportStockStatement) ?
+                    (!editStockStatement && !register && !projectWiseReportStockStatement) ?
             <div>
-            <div onClick={handleGetBack} className='left-arrow'>
-                        <i class="fa-solid fa-arrow-left text-4xl"></i>
+            <div className=''>
+                        <i onClick={handleGetBack} class="fas text-3xl left-arrow fa-long-arrow-alt-left"></i>
                         </div>
                 
-                     <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                     <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
@@ -76,11 +76,11 @@ const StockStatement = ({data, setGin, setGrn, setTransferNote, setStockStatemen
                         </div>
                         {
                             data.map(singleData => <div>
-                                <div onClick={()=>handleTransferNote(singleData)} className='flex my-2 forHover'>
-                                    <p>{singleData}</p>
+                                <div onClick={()=>handleTransferNote(singleData)} className='flex forHover'>
+                                    <p className='py-4'>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>
-                                <hr />
+                                <hr className='w-screen line'></hr>
                             </div>)
                         }
                     </div>

@@ -5,21 +5,21 @@ const AllGRN = ({ setCreateGRN }) => {
         setCreateGRN('');
     }
     return (
-        <div classNme='w-full ml-84 mt-24'>
+        <div classNme='w-full ml-84 mt-8'>
             <div>
-                <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                <i onClick={handleGetBack} class="fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
             </div>
-            <h1 className='mb-12 text-3xl'>GRN</h1>
-            <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+            <h1 className='mb-12 text-3xl mb-10'>GRN</h1>
+            <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                 <div class="card-body">
                     <div className='flex justify-between'>
                         <div className='flex ml-12'>
                             <div className=''>
                                 <p className='flex justify-end mt-6 mr-4 text-xl'>GRN No.</p>
                                 <p className='flex justify-end mr-4 text-xl mt-14'>Purchase Order</p>
-                                <p className='flex justify-end mt-12 mr-4 text-xl'>Invoice No</p>
+                                <p className='flex justify-end mt-8 mr-4 text-xl'>Invoice No</p>
                                 <p className='flex justify-end mr-4 text-xl mt-14'>GRN Date</p>
-                                <p className='flex justify-end mt-12 mr-4 text-xl'>Invoice Date</p>
+                                <p className='flex justify-end mt-8 mr-4 text-xl'>Invoice Date</p>
 
                             </div>
 
@@ -35,7 +35,7 @@ const AllGRN = ({ setCreateGRN }) => {
 
 
 
-                        <div className='flex mt-12 mr-96'>
+                        <div className='flex mt-8 mr-96'>
                             <div class="form-control">
                                 <label class="label cursor-pointer">
                                     <span class="label-text mr-6">Remember me</span>

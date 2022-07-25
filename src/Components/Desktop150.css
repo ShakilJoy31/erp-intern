@@ -16,7 +16,7 @@
 
 .hide{
     position: absolute;
-    left: -260px; 
+    left: -245px; 
 }
 
 .text-size{
@@ -29,7 +29,7 @@
 }
 .toggle-button{
     position: absolute;
-    right: -20px;
+    right: -25px;
     background-color: #7E76CA;
     border: 0;
 }

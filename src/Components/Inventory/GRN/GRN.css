@@ -1,6 +1,11 @@
 .left-arrow{
-    margin-bottom: 10px; 
+     
 }
 .left-arrow:hover{
     color: #7E76CA;
+}
+.line{
+    position: absolute;
+    left: 0;
+    right: 0;
 }

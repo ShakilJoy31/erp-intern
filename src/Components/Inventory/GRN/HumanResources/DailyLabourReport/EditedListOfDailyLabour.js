@@ -6,14 +6,14 @@ const EditedListOfDailyLabourReport = ({setList}) => {
     }
 
     return (
-        <div className='mt-12 mb-8'>
+        <div className='mt-8 mb-8'>
                 <div>
-                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="  fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
                 </div>
                 <div className='flex items-center ms-12'>
-                    <h1 className='mb-10 text-3xl'>Edit/View/Delete Offer Letter</h1>
+                    <h1 className='text-3xl mb-10'>Edit/View/Delete Offer Letter</h1>
                 </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div class="overflow-x-auto">
                         <table class="table w-full">

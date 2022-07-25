@@ -12,25 +12,24 @@ const AllBOQ = ( {setCreate, setEdit}) => {
         setEdit('')
       }
     return (
-        <div className='mt-12'>
+        <div className='mt-8'>
             {
                 !createBOQ ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
                 </div>
                 <div className='flex items-center justify-between'>
-                <div className='flex items-center ms-12'>
+                <div className='flex items-center'>
                     <h1 className='mb-10 text-3xl'>Create BOQ</h1>
-
                 </div>
-                <div className='flex items-center mb-8'>
+                <div className='flex items-center'>
                         <input type="text" placeholder="Type here" class="input max-w-lg w-80 border border-info hover:border-error mr-16" />
 
                         <button onClick={handleCreateProject} style={{ backgroundColor: '#7E76CA', width: '235px', marginTop: '60px', height: '50px', border: '0', borderRadius: '20px' }} class=" btn mb-14 text-white ">Add New</button>
 
                     </div>
                 </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div class="overflow-x-auto">
                             <table class="table w-full">

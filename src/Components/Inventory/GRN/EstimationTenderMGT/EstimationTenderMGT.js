@@ -37,39 +37,41 @@ const EstimationTenderMGT = () => {
     return (
         <div className='inventory-card'>
             {
-                (!tender && !boq && !estimation && !billing) ? <div className='mx-16 mt-24 '>
-                <div class="card flex bg-white justify-center shadow-2xl">
+                (!tender && !boq && !estimation && !billing) ? <div className='mx-16 mt-8 '>
+                <div class="card flex box-shadow bg-white justify-center shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'>
                             </div>
                             <h2 class="card-title">Estimation and Tendering</h2>
                         </div>
-                        <div onClick={handleTender} className='flex mt-4 forHover'>
-                            <p>New Tender</p>
+                        <div>
+                        <div onClick={handleTender} className='flex forHover'>
+                            <p className='py-4'>New Tender</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleBOQ} className='flex mt-4 forHover'>
-                            <p>BOQ</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleBOQ} className='flex forHover'>
+                            <p className='py-4'>BOQ</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleEstimation} className='flex mt-4 forHover'>
-                            <p>Estimation</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleEstimation} className='flex forHover'>
+                            <p className='py-4'>Estimation</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleBillingSchedile} className='flex mt-4 forHover'>
-                            <p>Billing Schedule</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleBillingSchedile} className='flex forHover'>
+                            <p className='py-4'>Billing Schedule</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div className='flex mt-4 forHover'>
-                            <p>Generate Bidding Overview</p>
+                        <hr className='w-screen line'></hr>
+                        <div className='flex forHover'>
+                            <p className='py-4'>Generate Bidding Overview</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
+                        <hr className='w-screen line'></hr>
+                        </div>
                     </div>
                 </div>
             </div> : <div>

@@ -36,11 +36,11 @@ const GRN = ({ data, setGin, setGrn, setTransferNote, setStockStatement,setAgewi
     return (
         <div>
             {
-                (!create && !editGRN && ! register) ? <div className='  mx-16 mt-24'>
-                    <div onClick={handleGetBack} className='left-arrow'>
-                        <i class="fa-solid fa-arrow-left text-4xl"></i>
+                (!create && !editGRN && ! register) ? <div className='mx-16 mt-8'>
+                    <div>
+                        <i onClick={handleGetBack} class="fas text-3xl left-arrow fa-long-arrow-alt-left"></i>
                         </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                     
                         <div>
@@ -50,12 +50,12 @@ const GRN = ({ data, setGin, setGrn, setTransferNote, setStockStatement,setAgewi
                     </div>
                         </div>
                         {
-                            data.map(singleData => <div>
-                                <div onClick={()=>handleCreate(singleData)} className='flex my-2 forHover'>
-                                    <p>{singleData}</p>
+                            data.map(singleData => <div className='w-full forHover'>
+                                <div onClick={()=>handleCreate(singleData)} className='flex'>
+                                    <p className='py-4'>{singleData}</p>
                                     <img src={rightArrow} alt="" />
                                 </div>
-                                <hr />
+                                <hr className='w-screen line'></hr>
                             </div>)
                         }
                     </div>

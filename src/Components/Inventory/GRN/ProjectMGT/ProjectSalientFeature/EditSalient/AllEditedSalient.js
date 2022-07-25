@@ -15,11 +15,11 @@ const AllEditedSalient = ({ setRegister, setEdit, setCreate}) => {
         <div className='w-100'>
             {
                 !editSalient ? <div>
-                <div className='  mx-16 mt-24'>
+                <div className='  mx-16 mt-8'>
                     <div onClick={handleGetBack} className='left-arrow'>
-                        <i class="fa-solid fa-arrow-left text-4xl"></i>
+                        <i class="fas text-3xl fa-long-arrow-alt-left"></i>
                     </div>
-                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                    <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>

@@ -32,39 +32,41 @@ const Inventory = ({setGin, setGrn, setTransferNote, setStockStatement,setAgewis
             
                  <div>
                     {
-                    (!setGin[0] && !setGrn[0] && !setTransferNote[0] && !setStockStatement[0] && !setAgewiseANofStock[0]) ? <div className='mx-16 mt-24 '>
+                    (!setGin[0] && !setGrn[0] && !setTransferNote[0] && !setStockStatement[0] && !setAgewiseANofStock[0]) ? <div className='mx-16 mt-8 '>
                         
-                    <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                    <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                         <div class="card-body">
                             <div className='flex items-center'>
                                 <div className='GRN'></div>
                                 <h2 class="card-title">Inventory</h2>
                             </div>
-                            <div onClick={()=>handleGRN('GRN')} className='flex mt-4 forHover'>
+                            <div>
+                            <div onClick={()=>handleGRN('GRN')} className='flex py-4 forHover'>
                                 <p className='mouse-pointer'>GRN</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
-                            <div onClick={()=>handleGIN('GIN')} className='flex mt-4 forHover'>
+                            <hr className='w-screen line'></hr>
+                            <div onClick={()=>handleGIN('GIN')} className='flex py-4 forHover'>
                                 <p className='mouse-pointer'>GIN</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
-                            <div onClick={()=>handleTransferNote('TransferNote')} className='flex mt-4 forHover'>
+                            <hr className='w-screen line'></hr>
+                            <div onClick={()=>handleTransferNote('TransferNote')} className='flex py-4 forHover'>
                                 <p className='mouse-pointer'>Transfer Note</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
-                            <div onClick={()=>handleStockStatement('StockStatement')} className='flex mt-4 forHover'>
+                            <hr className='w-screen line'></hr>
+                            <div onClick={()=>handleStockStatement('StockStatement')} className='flex py-4 forHover'>
                                 <p className='mouse-pointer'>Stock Statement</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
-                            <div onClick={()=>handleAgewiseAnalysisStock('Agewise Analysis of Stock')} className='flex mt-4 forHover'>
+                            <hr className='w-screen line'></hr>
+                            <div onClick={()=>handleAgewiseAnalysisStock('Agewise Analysis of Stock')} className='flex py-4 forHover'>
                                 <p className='mouse-pointer'>Agewise Analysis of Stock</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
+                            <hr className='w-screen line'></hr>
+                            </div>
     
                         </div>
                     </div>

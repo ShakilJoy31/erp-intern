@@ -6,11 +6,11 @@ const Create = ({setCreateTender}) => {
     }
     return (
         <div className='w-100'>
-            <div className='mt-24'>
+            <div className='mt-8'>
                 <div onClick={handleGetBack} className='left-arrow'>
-                    <i class="fa-solid fa-arrow-left text-3xl"></i>
+                    <i class="fas text-3xl fa-long-arrow-alt-left text-3xl mb-10"></i>
                 </div>
-                <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+                <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>

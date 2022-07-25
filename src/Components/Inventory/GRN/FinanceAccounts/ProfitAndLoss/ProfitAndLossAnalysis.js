@@ -21,13 +21,13 @@ const ProfitAndLossAnalysis = ({ setVoucher, setAdvice, setInvoice, setLedger, s
         setTDSregister('');
     }
     return (
-        <div className='  mx-16 mt-24'>
+        <div className='mx-16 mt-8 '>
             {
                 (!create) ? <div>
                 <div>
-                    <i onClick={handleGetBack} class="  fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                    <i onClick={handleGetBack} class="  fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
                     </div>
-            <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+            <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                 <div class="card-body">
                 
                     <div>
@@ -40,10 +40,10 @@ const ProfitAndLossAnalysis = ({ setVoucher, setAdvice, setInvoice, setLedger, s
                     {
                         data.map(singleData => <div>
                             <div className='flex forHover'>
-                                <p className='my-2'>{singleData}</p>
+                                <p className='py-4'>{singleData}</p>
                                 <img src={rightArrow} alt="" />
                             </div>
-                            <hr />
+                            <hr className='w-screen line'></hr>
                         </div>)
                     }
                 </div>

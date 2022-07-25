@@ -179,68 +179,70 @@ const Purchase = () => {
     return (
         <div className='inventory-card'>
            {
-            (!RequisitionStatus && !CreateOrderPurchase && !OrderPurchaseAmendment && !OrderPurchaseStatus && !RequisitionLeadTimeAnalysis && !RequestQuotation && !VendorPurchaseRegister && !ComparativePurchaseStatement && !PBGproformaInvoiceDetail && !BudgetVSAllocated && !PDCLCdetails) ?  <div className='  mx-16 mt-24'>
-            <div class="card flex justify-center bg-white shadow-2xl">
+            (!RequisitionStatus && !CreateOrderPurchase && !OrderPurchaseAmendment && !OrderPurchaseStatus && !RequisitionLeadTimeAnalysis && !RequestQuotation && !VendorPurchaseRegister && !ComparativePurchaseStatement && !PBGproformaInvoiceDetail && !BudgetVSAllocated && !PDCLCdetails) ?  <div className='mx-16 mt-8 '>
+            <div class="card flex box-shadow justify-center bg-white shadow-2xl">
                 <div class="card-body">
                     <div className='flex items-center'>
                         <div className='GRN'></div>
                         <h2 class="card-title">Purchase</h2>
                     </div>
+                    <div>
                     <div onClick={purchaseRequisitionStatus} className='flex mt-4 forHover'>
-                        <p>Purchase Requisition Status</p>
+                        <p className='py-4'>Purchase Requisition Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={createOrder} className='flex mt-4 forHover'>
-                        <p>Create Order</p>
+                        <p className='py-4'>Create Order</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={orderAmendment} className='flex mt-4 forHover'>
-                        <p>Order Amendment</p>
+                        <p className='py-4'>Order Amendment</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={orderStatus} className='flex mt-4 forHover'>
-                        <p>Order Status</p>
+                        <p className='py-4'>Order Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={requisitionOrderLeadTimeAnalysis} className='flex mt-4 forHover'>
-                        <p>Requisition- Order Lead Time analysis</p>
+                        <p className='py-4'>Requisition- Order Lead Time analysis</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div className='flex mt-4 forHover'>
-                        <p>Request for Quotation</p>
+                        <p className='py-4'>Request for Quotation</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={vendorRegister} className='flex mt-4 forHover'>
-                        <p>Vendor Register</p>
+                        <p className='py-4'>Vendor Register</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={comparativeStatement} className='flex mt-4 forHover'>
-                        <p>Comparative Statement</p>
+                        <p className='py-4'>Comparative Statement</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={PBGProformaInvoiceDetails} className='flex mt-4 forHover'>
-                        <p>PBG & Proforma Invoice Details</p>
+                        <p className='py-4'>PBG & Proforma Invoice Details</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div className='flex mt-4 forHover'>
-                        <p>Budget VS Allocated Status</p>
+                        <p className='py-4'>Budget VS Allocated Status</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
                     <div onClick={PDCandLCdetail} className='flex mt-4 forHover'>
-                        <p>PDC & LC details</p>
+                        <p className='py-4'>PDC & LC details</p>
                         <img src={rightArrow} alt="" />
                     </div>
-                    <hr />
+                    <hr className='w-screen line'></hr>
+                    </div>
                 </div>
             </div>
         </div> : <div>

@@ -291,88 +291,90 @@ const FinanceAccounts = () => {
     return (
         <div className='inventory-card'>
             {
-                (!advice &&!invoice && !voucher && !ledger && !ageing && !HOhost && !trial && !profit && !cashFlow && !bankBook && !cashBook && !checkBook && !bankReconciliation && !gstRegister && !tdsRegister) ? <div className='mx-16 mt-24 '>
-                <div class="card flex justify-center bg-white shadow-2xl">
+                (!advice &&!invoice && !voucher && !ledger && !ageing && !HOhost && !trial && !profit && !cashFlow && !bankBook && !cashBook && !checkBook && !bankReconciliation && !gstRegister && !tdsRegister) ? <div className='mx-16 mt-8 '>
+                <div class="card flex box-shadow justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
                             <h2 class="card-title">Finance and Accounts</h2>
                         </div>
-                        <div onClick={handleVoucher} className='flex my-2 forHover'>
-                            <p>Voucher</p>
+                        <div>
+                        <div onClick={handleVoucher} className='flex  forHover'>
+                            <p className='py-4'>Voucher</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleInvoice} className='flex my-2 forHover'>
-                            <p>Invoice Generation</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleInvoice} className='flex  forHover'>
+                            <p className='py-4'>Invoice Generation</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleAdvice} className='flex my-2 forHover'>
-                            <p>Advice</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleAdvice} className='flex  forHover'>
+                            <p className='py-4'>Advice</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleLedger} className='flex my-2 forHover'>
-                            <p>Ledger</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleLedger} className='flex  forHover'>
+                            <p className='py-4'>Ledger</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleAgeing} className='flex my-2 forHover'>
-                            <p>Ageing Analysis</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleAgeing} className='flex  forHover'>
+                            <p className='py-4'>Ageing Analysis</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleHOhost} className='flex my-2 forHover'>
-                            <p>HO cost allocation</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleHOhost} className='flex  forHover'>
+                            <p className='py-4'>HO cost allocation</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleTrialBalance} className='flex my-2 forHover'>
-                            <p>Trial Balance</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleTrialBalance} className='flex  forHover'>
+                            <p className='py-4'>Trial Balance</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleProfitLoss} className='flex my-2 forHover'>
-                            <p>Profit & Loss Analysis</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleProfitLoss} className='flex  forHover'>
+                            <p className='py-4'>Profit & Loss Analysis</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleCashFlow} className='flex my-2 forHover'>
-                            <p>Cash Flow Analysis</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleCashFlow} className='flex  forHover'>
+                            <p className='py-4'>Cash Flow Analysis</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleBankBook} className='flex my-2 forHover'>
-                            <p>Bank Book</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleBankBook} className='flex  forHover'>
+                            <p className='py-4'>Bank Book</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleCashBook} className='flex my-2 forHover'>
-                            <p>Cash Book</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleCashBook} className='flex  forHover'>
+                            <p className='py-4'>Cash Book</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleCheckBook} className='flex my-2 forHover'>
-                            <p>Cheque Book</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleCheckBook} className='flex  forHover'>
+                            <p className='py-4'>Cheque Book</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleBankReconciliation} className='flex my-2 forHover'>
-                            <p>Bank Reconciliation</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleBankReconciliation} className='flex  forHover'>
+                            <p className='py-4'>Bank Reconciliation</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div className='flex my-2 forHover'>
-                            <p>GST Register</p>
+                        <hr className='w-screen line'></hr>
+                        <div className='flex  forHover'>
+                            <p className='py-4'>GST Register</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div className='flex my-2 forHover'>
-                            <p>TDS Register</p>
+                        <hr className='w-screen line'></hr>
+                        <div className='flex  forHover'>
+                            <p className='py-4'>TDS Register</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
+                        <hr className='w-screen line'></hr>
+                        </div>
                     </div>
                 </div>
             </div> : <div>

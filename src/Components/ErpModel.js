@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import './Desktop150.css';
-import executiveDashboard from './icons/executive.svg';
+import executiveDashboardImg from './icons/executive.svg';
 import billingsvg from './icons/billing.svg';
 import estimationsvg from './icons/estimation.svg';
 import financesvg from './icons/finance.svg';
@@ -12,8 +12,10 @@ import projectMGTsvg from './icons/project MGT.svg';
 import purchasesvg from './icons/purchase.svg';
 import stockHoldersvg from './icons/stock holder.svg';
 import applicationLogo from './icons/applicationLogo.svg'
+import Navbar from './Navbar/Navbar';
 
-const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAgewiseANofStock }) => {
+const ErpModel = ({ setGin, setGrn, setTransferNote, setStockStatement, setAgewiseANofStock }) => {
+    const [executiveDashboard, setExecutiveDashboard] = useState('setExecutiveDashboard');
     const [inventory, setInventory] = useState('');
     const [billing, setBilling] = useState('');
     const [humanResource, setHumanResource] = useState('');
@@ -24,11 +26,12 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
     const [finance, setFinance] = useState('');
     const [purchase, setPurchase] = useState('');
     const [toggle, setToggle] = useState(false);
+    const navigate = useNavigate(); 
 
 
-    const handleInventory = () => {
-
-        setInventory('setInventory')
+    const handleExecutiveDashboard = () => {
+        setInventory('')
+        setExecutiveDashboard('setExecutiveDashboard')
         setBilling('')
         setHumanResource('')
         setStakeholderMGT('')
@@ -43,9 +46,31 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard')
+    }
+    const handleInventory = () => {
+
+        setInventory('setInventory')
+        setExecutiveDashboard('')
+        setBilling('')
+        setHumanResource('')
+        setStakeholderMGT('')
+        setEstimation('')
+        setProjectMGT('')
+        setPlanning('')
+        setFinance('')
+        setPurchase('')
+
+        setGin('')
+        setGrn('')
+        setTransferNote('')
+        setStockStatement('')
+        setAgewiseANofStock('')
+        navigate('/dashboard/inventory')
     }
     const handlePurchase = () => {
         setInventory('')
+        setExecutiveDashboard('')
         setBilling('')
         setHumanResource('')
         setStakeholderMGT('')
@@ -60,10 +85,12 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/purchase')
     }
     const handleBilling = () => {
         setInventory('')
         setBilling('handleBilling')
+        setExecutiveDashboard('')
         setHumanResource('')
         setStakeholderMGT('')
         setEstimation('')
@@ -77,11 +104,13 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/billing')
     }
     const handleHumanResource = () => {
         setInventory('')
         setBilling('')
         setHumanResource('handleHumanResource')
+        setExecutiveDashboard('')
         setStakeholderMGT('')
         setEstimation('')
         setProjectMGT('')
@@ -94,6 +123,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/humanResources')
     }
     const handleStakeholderMGT = () => {
         setInventory('')
@@ -101,6 +131,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setHumanResource('')
         setStakeholderMGT('setStakeholderMGT')
         setEstimation('')
+        setExecutiveDashboard('')
         setProjectMGT('')
         setPlanning('')
         setFinance('')
@@ -111,6 +142,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/stakeholderMGT')
     }
     const handleEstimation = () => {
         setInventory('')
@@ -119,6 +151,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setStakeholderMGT('')
         setEstimation('setEstimation')
         setProjectMGT('')
+        setExecutiveDashboard('')
         setPlanning('')
         setFinance('')
         setPurchase('')
@@ -128,12 +161,14 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/estimationTenderMGT')
     }
     const handleProjectMGT = () => {
         setInventory('')
         setBilling('')
         setHumanResource('')
         setStakeholderMGT('')
+        setExecutiveDashboard('')
         setEstimation('')
         setProjectMGT('setProjectMGT')
         setPlanning('')
@@ -145,6 +180,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/projectMGT')
     }
     const handlePlanning = () => {
         setInventory('')
@@ -153,6 +189,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setStakeholderMGT('')
         setEstimation('')
         setProjectMGT('')
+        setExecutiveDashboard('')
         setPlanning('setPlanning')
         setFinance('')
         setPurchase('')
@@ -162,12 +199,14 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/planning')
     }
     const handleFinance = () => {
         setInventory('')
         setBilling('')
         setHumanResource('')
         setStakeholderMGT('')
+        setExecutiveDashboard('')
         setEstimation('')
         setProjectMGT('')
         setPlanning('')
@@ -179,6 +218,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
         setTransferNote('')
         setStockStatement('')
         setAgewiseANofStock('')
+        navigate('/dashboard/financeAccount')
     }
     const handleToggleButton = () =>{
         if(toggle){
@@ -191,9 +231,10 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
 
     return (
         <div>
+            <Navbar></Navbar>
             <div class="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content w-full flex body-background-color ml-80">
+                <div class={`drawer-content w-full flex body-background-color ${toggle ? 'ml-48' : 'ml-80'}`}>
                     <Outlet></Outlet>
                 </div>
                 <div class="drawer-side">
@@ -203,23 +244,24 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
 
                         <div className='shadow-purple-300'>
                             <div>
-                                <div className='mt-2 ml-4'>
-                                    <Link className='text-3xl text-purple-500' to='/'>
+                                <div className='mt-2 ml-8'>
+                                    <Link className='mb-10 text-3xl text-purple-500' to='/'>
                                         <img src={applicationLogo} alt="" />
                                     </Link>
                                 </div>
                             </div>
-                            <div className='mt-24'>
-                                <div className='flex items-center mb-6 justify center'>
-                                    <img className='mx-4' src={executiveDashboard} alt="" />
-                                    <Link className='w-full text-size' to='/dashboard/executiveDashboard'>Executive Dashboard</Link>
-                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={executiveDashboard} alt="" />
+                            <div className='mt-8'>
+                                <div onClick={handleExecutiveDashboard} className={`flex items-center mb-6 justify center ${executiveDashboard ? 'for-linear-background' : ''} `}>
+                                <div className={`${executiveDashboard ? 'activeLink' : ''}  `}></div>
+                                    <img className='mx-4' src={executiveDashboardImg} alt="" />
+                                    <Link className='w-full text-size' to='/dashboard'>Executive Dashboard</Link>
+                                    <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={executiveDashboardImg} alt="" />
                                 </div>
 
                                 <div onClick={handleInventory} className={`flex items-center mb-6 justify center ${inventory ? 'for-linear-background' : ''} `}>
                                     <div className={`${inventory ? 'activeLink' : ''}  `}></div>
                                     <img className='ml-4 mr-4' src={inventorysvg} alt="" />
-                                    <Link className='w-full text-size' to='/dashboard'>Inventory</Link>
+                                    <Link className='w-full text-size' to='/dashboard/inventory'>Inventory</Link>
                                     <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={inventorysvg} alt="" />
                                 </div>
 
@@ -244,7 +286,7 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
                                     <img className={`${toggle ? 'block' : 'hidden'} mx-4 mr-8`} src={humanResourcesvg} alt="" />
                                 </div>
 
-                                <label onClick={handleToggleButton} for="my-drawer-2" className='ml-4 btn btn-circle sidebar anisidebar toggle-button'>
+                                <label onClick={handleToggleButton} for="my-drawer-2" className='btn btn-circle sidebar anisidebar toggle-button'>
                                     {
                                         toggle ? <i class="fa-solid text-white fa-chevron-right"></i> : <i class="fa-solid fa-chevron-left text-white"></i>
                                     }
@@ -294,4 +336,4 @@ const Desktop150 = ({ setGin, setGrn, setTransferNote, setStockStatement, setAge
     );
 };
 
-export default Desktop150;
+export default ErpModel;

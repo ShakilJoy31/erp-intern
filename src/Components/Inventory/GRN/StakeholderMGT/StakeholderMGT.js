@@ -26,28 +26,30 @@ const StakeholderMGT = () => {
     return (
         <div className='inventory-card'>
             {
-                (!client && !vendor && !agency) ? <div className='mx-16 mt-24 '>
-                <div class="card flex bg-white justify-center shadow-2xl">
+                (!client && !vendor && !agency) ? <div className='mx-16 mt-8 '>
+                <div class="card box-shadow flex bg-white justify-center shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
                             <h2 class="card-title">Stakeholder Management</h2>
                         </div>
-                        <div onClick={handleClient} className='flex mt-4 forHover'>
-                            <p>Client</p>
+                        <div>
+                        <div onClick={handleClient} className='flex forHover'>
+                            <p className='py-4'>Client</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleVendor} className='flex mt-4 forHover'>
-                            <p>Vendor</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleVendor} className='flex forHover'>
+                            <p className='py-4'>Vendor</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleAgent} className='flex mt-4 forHover'>
-                            <p>Agency</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleAgent} className='flex forHover'>
+                            <p className='py-4'>Agency</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
+                        <hr className='w-screen line'></hr>
+                        </div>
                     </div>
                 </div>
             </div> : <div>

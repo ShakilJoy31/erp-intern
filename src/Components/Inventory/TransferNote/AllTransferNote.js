@@ -5,19 +5,19 @@ const AllTransferNote = ({setTransfer}) => {
         setTransfer(''); 
     }
     return (
-        <div classNme='w-full ml-84 mt-24'>
+        <div classNme='w-full ml-84 mt-8'>
             <div>
-                <i onClick={handleGetBack} class="fa-solid fa-arrow-left text-3xl left-arrow"></i>
+                <i onClick={handleGetBack} class="fas text-3xl fa-long-arrow-alt-left left-arrow"></i>
             </div>
-            <h1 className='mb-12 text-3xl'>Transfer Note</h1>
-            <div class="card flex justify-center box-shadow shadow-2xl bg-white">
+            <h1 className='mb-12 text-3xl mb-10'>Transfer Note</h1>
+            <div class="card flex box-shadow justify-center box-shadow shadow-2xl bg-white">
                 <div class="card-body">
                     <div className='flex justify-between'>
                         <div className='flex ml-12'>
                             <div className=''>
                                 <p className='flex justify-end mt-6 mr-4 text-xl'>Transfer Id</p>
                                 <p className='flex justify-end mr-4 text-xl mt-14'>Transfer from</p>
-                                <p className='flex justify-end mt-12 mr-4 text-xl'>Transfer to</p>
+                                <p className='flex justify-end mt-8 mr-4 text-xl'>Transfer to</p>
                                 <p className='flex justify-end mr-4 text-xl mt-14'>Transfer Date</p>
                                 
 

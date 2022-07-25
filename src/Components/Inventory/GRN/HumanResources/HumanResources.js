@@ -110,53 +110,55 @@ const HumanResources = () => {
     return (
         <div className='inventory-card'>
             {
-                (!employeeDetails && !attedance && !leaveManagement && !offerLettter && !serviceRecordLetter && !handoverFormalLetter && !payroll && !dayLabourReport) ? <div className='  mx-16 mt-24'>
-                <div class="card flex justify-center bg-white shadow-2xl">
+                (!employeeDetails && !attedance && !leaveManagement && !offerLettter && !serviceRecordLetter && !handoverFormalLetter && !payroll && !dayLabourReport) ? <div className='mx-16 mt-8 '>
+                <div class="card flex box-shadow justify-center bg-white shadow-2xl">
                     <div class="card-body">
                         <div className='flex items-center'>
                             <div className='GRN'></div>
                             <h2 class="card-title">Human Resources</h2>
                         </div>
-                        <div className='flex mt-4 forHover'>
-                            <p>Employees Details</p>
+                        <div>
+                        <div className='flex forHover'>
+                            <p className='py-4'>Employees Details</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleAttednce} className='flex mt-4 forHover'>
-                            <p>Attendance</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleAttednce} className='flex forHover'>
+                            <p className='py-4'>Attendance</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleLeaveManagement} className='flex mt-4 forHover'>
-                            <p>Leave Management</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleLeaveManagement} className='flex forHover'>
+                            <p className='py-4'>Leave Management</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleOfferLettter} className='flex mt-4 forHover'>
-                            <p>Offer Letter</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleOfferLettter} className='flex forHover'>
+                            <p className='py-4'>Offer Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleServiceRecordLetter} className='flex mt-4 forHover'>
-                            <p>Service Record Letter</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleServiceRecordLetter} className='flex forHover'>
+                            <p className='py-4'>Service Record Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleHandoverFormalLetter} className='flex mt-4 forHover'>
-                            <p>Handover Formal Letter</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleHandoverFormalLetter} className='flex forHover'>
+                            <p className='py-4'>Handover Formal Letter</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handlePayroll} className='flex mt-4 forHover'>
-                            <p>Payroll</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handlePayroll} className='flex forHover'>
+                            <p className='py-4'>Payroll</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
-                        <div onClick={handleDayLabourReport} className='flex mt-4 forHover'>
-                            <p>Daily Labour Report</p>
+                        <hr className='w-screen line'></hr>
+                        <div onClick={handleDayLabourReport} className='flex forHover'>
+                            <p className='py-4'>Daily Labour Report</p>
                             <img src={rightArrow} alt="" />
                         </div>
-                        <hr />
+                        <hr className='w-screen line'></hr>
+                        </div>
                     </div>
                 </div>
             </div> : <div>

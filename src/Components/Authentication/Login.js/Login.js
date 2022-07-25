@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
+import LoginNavbar from "../../Navbar/LoginNavbar";
 import meetingLogin from './../../icons/pana.svg';
 import './Login.css'; 
 
@@ -17,16 +18,18 @@ const Login = () => {
     setPassWord(event.target.value);  
   }
   const handleLogin = () =>{
-    if(email && password){
+    if(email==='admin@gmail.com' && password==='admin'){
       navigate('/dashboard'); 
     }
     else{
-      toast.error('Email and Password is required'); 
+      toast.error('Invalid Email or Password'); 
     }
   } 
   
   return (
-    <div
+    <div>
+      <LoginNavbar></LoginNavbar>
+      <div
       style={{ backgroundColor: "#E5E5E5" }}
       className="flex justify-center w-full min-h-screen background-login-image"
     >
@@ -91,6 +94,7 @@ const Login = () => {
         </div>
       </div>
       <ToastContainer></ToastContainer>
+    </div>
     </div>
   );
 };
